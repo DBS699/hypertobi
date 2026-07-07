@@ -1,0 +1,48 @@
+# Sveltia CMS configuration — HYPERTOBI
+# ─────────────────────────────────────────────────────────────────────────────
+# Edits made here are committed to the GitHub repo; Vercel rebuilds → live.
+# BEFORE LOGIN WORKS (one-time, see README.md):
+#   1. create a GitHub OAuth App (callback: https://<domain>/api/callback)
+#   2. set GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET in the Vercel project
+#   3. make sure the repo below is connected to the Vercel project
+
+backend:
+  name: github
+  repo: DBS699/hypertobi
+  branch: main
+  base_url: https://hypertobi.vercel.app
+  auth_endpoint: /api/auth
+
+site_url: https://hypertobi.vercel.app
+display_url: https://hypertobi.vercel.app
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: photos
+    label: "Photos (gallery)"
+    files:
+      - name: gallery
+        label: "Photo gallery"
+        file: "public/content/photos.json"
+        fields:
+          - label: "Photos"
+            name: photos
+            widget: list
+            summary: "№ {{fields.num}} · {{fields.format}}"
+            fields:
+              - { name: src, label: "Image", widget: image }
+              - { name: num, label: "Number (e.g. 01)", widget: string }
+              - { name: format, label: "Format", widget: select, options: ["35mm", "120"], default: "35mm" }
+
+  - name: pizza
+    label: "Pizza prices"
+    files:
+      - name: prices
+        label: "Package prices"
+        file: "public/content/pizza.json"
+        fields:
+          - { name: pk1_price, label: "Aperitivo — CHF / person", widget: string, hint: "number only, e.g. 22" }
+          - { name: pk2_price, label: "La Festa — CHF / person", widget: string }
+          - { name: pk3_price, label: "Matrimonio — CHF / person (from)", widget: string }

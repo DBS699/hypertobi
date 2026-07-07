@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperpizza — Neapolitan pizza, wherever you party.</title>
+<meta name="description" content="Neapolitan pizza catering for weddings, offices & birthdays — plus pizza workshops & teambuilding. Wood-fired, 450°C, made live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page" data-accent="#E8402A" style="--accent:#E8402A">
+
+  <div class="paper-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="Hypertobi home"><span class="logo-letter tt tt--pizza" style="--rot:-8deg">H</span><span class="logo-letter tt tt--film" style="--rot:6deg">Y</span><span class="logo-letter tt tt--foto" style="--rot:-6deg">P</span><span class="logo-letter tt tt--web" style="--rot:8deg">E</span><span class="logo-letter tt tt--pizza" style="--rot:-7deg">R</span><span class="logo-letter tt tt--film" style="--rot:7deg">T</span><span class="logo-letter tt tt--foto" style="--rot:-6deg">O</span><span class="logo-letter tt tt--web" style="--rot:6deg">B</span><span class="logo-letter tt tt--pizza" style="--rot:-8deg">I</span></a>
+    <div class="nav-links">
+      <a class="nav-link active" data-c="pizza" href="/pizza.html"><span data-i18n="nav_pizza">Pizza &amp; Workshops</span></a>
+      <a class="nav-link" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
+      <a class="nav-link" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
+      <a class="nav-link" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
+      <a class="nav-link" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <div class="lang-toggle">
+        <button data-lang="de">DE</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" data-scroll="hero">
+    <div class="hero-row">
+      <div>
+        <span class="brand tt tt--pizza" data-anim="letters"><span style="display:inline-block">H</span><span style="display:inline-block">Y</span><span style="display:inline-block">P</span><span style="display:inline-block">E</span><span style="display:inline-block">R</span><span style="display:inline-block">P</span><span style="display:inline-block">I</span><span style="display:inline-block">Z</span><span style="display:inline-block">Z</span><span style="display:inline-block">A</span></span>
+        <h1 data-anim="h1"><span class="tt tt--lg tt--ink" data-i18n="pz_h1a">Neapolitan pizza,</span><br><span class="tt tt--lg tt--pizza" data-i18n="pz_h1b">wherever you party.</span></h1>
+        <p class="sub" data-i18n="pz_sub" data-anim="sub">Catering for weddings, offices &amp; birthdays — or roll up your sleeves in a workshop and learn it yourself.</p>
+        <div data-anim="chips" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px">
+          <span data-i18n="pz_chip1" style="font-size:14.5px;font-weight:700">Wood-fired · 450°C</span>
+          <span style="width:6px;height:6px;border-radius:50%;background:#E8402A"></span>
+          <span data-i18n="pz_chip2" style="font-size:14.5px;font-weight:700">10–150 guests</span>
+          <span style="width:6px;height:6px;border-radius:50%;background:#E8402A"></span>
+          <span data-i18n="pz_chip3" style="font-size:14.5px;font-weight:700">Made live at your event</span>
+        </div>
+      </div>
+      <div class="model-slot" id="model-slot" data-anim="pop" style="align-self:flex-end"></div>
+    </div>
+  </header>
+
+  <!-- CATERING + WORKSHOPS -->
+  <main class="main">
+
+    <div class="grid-2">
+      <!-- Catering card -->
+      <section class="card" data-anim="card" style="background:#E8402A;color:#fff;display:flex;flex-direction:column;gap:16px">
+        <h2 class="h2" data-i18n="pz_cat_title">Catering</h2>
+        <p data-i18n="pz_cat_body" style="font-size:14.5px;line-height:1.6;margin:0">I bring the oven, the dough and the hype — you bring the people. Fresh Neapolitan pizza, stretched and fired in front of your guests, one after the other until everyone is happy.</p>
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=70" alt="The oven in action at an event" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;display:block">
+        <a href="#booking" data-i18n="pz_form_title" class="pill" style="align-self:flex-start;color:#E8402A;padding:10px 20px">Request a date</a>
+      </section>
+
+      <!-- Workshop card -->
+      <section class="card" data-anim="card" style="background:#fff;display:flex;flex-direction:column;gap:16px">
+        <h2 class="h2" data-i18n="pz_ws_title">Workshops &amp; teambuilding</h2>
+        <p data-i18n="pz_ws_body" style="font-size:14.5px;line-height:1.6;margin:0;color:#4a423c">Hands in the dough: I show your team how to stretch, top and fire a real Neapolitan pizza. Everyone makes their own — then we all eat together at one long table. Works great for teams of 6 to 30.</p>
+        <div data-anim-alt style="display:flex;flex-direction:column;gap:8px">
+          <div class="step-row"><span class="n">1</span><span data-i18n="pz_ws_b1">Dough theory (the fun kind)</span></div>
+          <div class="step-row"><span class="n">2</span><span data-i18n="pz_ws_b2">Stretch, top &amp; fire your own pizza</span></div>
+          <div class="step-row"><span class="n">3</span><span data-i18n="pz_ws_b3">Long table dinner together</span></div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=70" alt="Workshop table, hands in flour" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px;display:block">
+      </section>
+    </div>
+
+
+    <!-- MENU -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_menu_t">The pizzas.</h2>
+      <p class="sec-sub" data-i18n="pz_menu_sub">48-hour cold-fermented dough, San Marzano tomatoes, fior di latte — baked in 90 seconds at 450°C.</p>
+      <div class="grid-3 menu-grid">
+        <div class="card menu-card"><div class="mname">Margherita</div><p class="ming" data-i18n="pz_m1">Tomato, fior di latte, basil, olive oil</p></div>
+        <div class="card menu-card"><div class="mname">Marinara</div><p class="ming" data-i18n="pz_m2">Tomato, garlic, oregano — naturally vegan</p></div>
+        <div class="card menu-card"><div class="mname">Diavola</div><p class="ming" data-i18n="pz_m3">Spicy salami, fior di latte, chili honey</p></div>
+        <div class="card menu-card"><div class="mname">Crudo &amp; Rucola</div><p class="ming" data-i18n="pz_m4">Prosciutto crudo, rocket, parmesan shavings</p></div>
+        <div class="card menu-card"><div class="mname">Quattro Formaggi</div><p class="ming" data-i18n="pz_m5">Four cheeses, a touch of honey</p></div>
+        <div class="card menu-card"><div class="mname">Stagionale</div><p class="ming" data-i18n="pz_m6">The monthly special — whatever the season gives</p></div>
+      </div>
+      <p class="menu-note" data-i18n="pz_menu_note">🌱 Vegetarian is always on the menu — vegan mozzarella &amp; gluten-free dough on pre-order.</p>
+    </section>
+
+    <!-- PACKAGES -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_pk_t">Packages &amp; prices.</h2>
+      <p class="sec-sub" data-i18n="pz_pk_sub">Flat and fair — you get a fixed quote after your request, no surprises on the day.</p>
+      <div class="grid-3 pk-grid">
+        <div class="card pk-card">
+          <div class="pk-name">Aperitivo</div>
+          <div class="pk-price">CHF <span data-price="pk1_price">22</span> <span data-i18n="pz_pp">/ person</span></div>
+          <ul class="pk-list">
+            <li data-i18n="pz_pk1_l1">Up to 30 guests</li>
+            <li data-i18n="pz_pk1_l2">1.5 h of service</li>
+            <li data-i18n="pz_pk1_l3">Margherita &amp; Marinara, sliced apéro-style</li>
+            <li data-i18n="pz_pk1_l4">Perfect for openings &amp; office apéros</li>
+          </ul>
+        </div>
+        <div class="card pk-card pk-card--hot">
+          <div class="pk-flag" data-i18n="pz_pk_flag">MOST BOOKED</div>
+          <div class="pk-name">La Festa</div>
+          <div class="pk-price">CHF <span data-price="pk2_price">32</span> <span data-i18n="pz_pp2">/ person</span></div>
+          <ul class="pk-list">
+            <li data-i18n="pz_pk2_l1">10–150 guests</li>
+            <li data-i18n="pz_pk2_l2">2 h all-you-can-eat, straight from the oven</li>
+            <li data-i18n="pz_pk2_l3">Full menu incl. the monthly special</li>
+            <li data-i18n="pz_pk2_l4">Plates, napkins, setup &amp; teardown included</li>
+          </ul>
+        </div>
+        <div class="card pk-card">
+          <div class="pk-name">Matrimonio</div>
+          <div class="pk-price"><span data-i18n="pz_from">from</span> CHF <span data-price="pk3_price">39</span> <span data-i18n="pz_pp3">/ person</span></div>
+          <ul class="pk-list">
+            <li data-i18n="pz_pk3_l1">Weddings &amp; big days</li>
+            <li data-i18n="pz_pk3_l2">Extended service &amp; antipasti boards</li>
+            <li data-i18n="pz_pk3_l3">Dessert pizza with Nutella &amp; berries</li>
+            <li data-i18n="pz_pk3_l4">Personal planning call included</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card pk-ws">
+        <span style="font-family:var(--display);font-weight:800;font-size:19px" data-i18n="pz_ws_price_t">Workshops &amp; teambuilding:</span>
+        <span style="font-size:14.5px" data-i18n="pz_ws_price_b">CHF 85 / person · 6–30 people · ~3 hours — dough theory, hands-on baking, long-table dinner.</span>
+      </div>
+      <p class="menu-note" data-i18n="pz_pk_note">Travel within 60 km of Bern included — further by arrangement. Kids under 6 eat free.</p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_how_t">How it works.</h2>
+      <div class="grid-4 how-grid">
+        <div class="card how-card"><span class="hn">1</span><div class="ht" data-i18n="pz_how1_t">Request your date</div><p data-i18n="pz_how1_b">Form below — you hear back within 48 h with a fixed quote.</p></div>
+        <div class="card how-card"><span class="hn">2</span><div class="ht" data-i18n="pz_how2_t">I arrive ~1 h early</div><p data-i18n="pz_how2_b">Oven setup: all I need is a flat spot of about 3×2 m and a sturdy table.</p></div>
+        <div class="card how-card"><span class="hn">3</span><div class="ht" data-i18n="pz_how3_t">1.5–2 h live baking</div><p data-i18n="pz_how3_b">Pizzas fly out nonstop — stretched, topped and fired in front of your guests.</p></div>
+        <div class="card how-card"><span class="hn">4</span><div class="ht" data-i18n="pz_how4_t">30 min teardown</div><p data-i18n="pz_how4_b">I pack up and leave the place as clean as I found it.</p></div>
+      </div>
+    </section>
+
+    <!-- GOOD TO KNOW -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_faq_t">Good to know.</h2>
+      <div class="faq">
+        <details><summary data-i18n="pz_f1_q">How much space do you need?</summary><p class="a" data-i18n="pz_f1_a">A flat spot of roughly 3×2 metres, outdoors or well covered, plus a sturdy table. The oven runs on gas — no power hookup needed, no smoke worries.</p></details>
+        <details><summary data-i18n="pz_f2_q">What if it rains?</summary><p class="a" data-i18n="pz_f2_a">A covered spot is all we need — carport, pavilion, barn entrance or a big balcony all work. For summer events I recommend planning a small shady/rainy plan B anyway.</p></details>
+        <details><summary data-i18n="pz_f3_q">How many pizzas should we plan?</summary><p class="a" data-i18n="pz_f3_a">Count on 1 to 1.5 pizzas per person — during the service window it's all-you-can-eat anyway, so nobody leaves hungry.</p></details>
+        <details><summary data-i18n="pz_f4_q">Vegetarian, vegan or gluten-free?</summary><p class="a" data-i18n="pz_f4_a">Vegetarian is always covered. Vegan mozzarella and gluten-free dough are no problem with a few days notice — just mention it in your request.</p></details>
+        <details><summary data-i18n="pz_f5_q">How far do you travel?</summary><p class="a" data-i18n="pz_f5_a">I am based in Bern. Up to 60 km travel is included in every package, further afield is possible by arrangement.</p></details>
+        <details><summary data-i18n="pz_f6_q">Deposit &amp; cancellation?</summary><p class="a" data-i18n="pz_f6_a">Your date is fixed with a 20% deposit. Free cancellation up to 14 days before the event — after that we simply find a new date.</p></details>
+      </div>
+    </section>
+
+    <!-- QUOTES -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_ts_t">People keep talking about the pizza.</h2>
+      <div class="grid-3 quote-grid">
+        <div class="card quote-card"><p class="q" data-i18n="pz_ts1_q">“The pizza was the highlight of our wedding — guests still bring it up a year later.”</p><span class="who" data-i18n="pz_ts1_w">Nina &amp; Marc · wedding in Thun</span></div>
+        <div class="card quote-card"><p class="q" data-i18n="pz_ts2_q">“Team event of the year. Everyone with their hands in the flour, zero phones out.”</p><span class="who" data-i18n="pz_ts2_w">Corina · HR team workshop, Bern</span></div>
+        <div class="card quote-card"><p class="q" data-i18n="pz_ts3_q">“450 degrees, zero stress. Tobi set up, fed forty people and vanished like a pizza ninja.”</p><span class="who" data-i18n="pz_ts3_w">Luca · 40th birthday, Fribourg</span></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.7fr 1.3fr;gap:36px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px;position:sticky;top:96px">
+        <h2 data-i18n="pz_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Request a date</h2>
+        <p data-i18n="pz_note" style="font-size:13.5px;line-height:1.6;color:#6B6157;margin:0">No booking system, no spam — this writes a message you send me directly on Instagram.</p>
+        <a data-i18n="pz_dm" class="pill" style="align-self:flex-start;font-size:13px" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Open Instagram → @hypertobi</a>
+      </div>
+      <div>
+        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text"></label>
+          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email"></label>
+          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date"></label>
+          <label class="field"><span data-i18n="pz_l_guests">Guests</span><input id="bk-guests" type="number" min="1"></label>
+          <label class="field"><span data-i18n="pz_l_where">Location</span><input id="bk-where" type="text"></label>
+          <label class="field"><span data-i18n="pz_l_type">What do you need?</span><select id="bk-type"><option data-i18n="pz_t_cat" value="Catering">Catering</option><option data-i18n="pz_t_ws" value="Workshop / Teambuilding">Workshop / Teambuilding</option></select></label>
+          <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="bk-msg-in" rows="3" data-i18n-ph="pz_ph_msg" placeholder="Special requests? (vegetarian, gluten-free…)"></textarea></label>
+        </div>
+        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#E8402A;color:#fff">Compose my request</button>
+
+        <div id="bk-box" class="compose-box" hidden style="margin-top:20px">
+          <pre id="bk-msg"></pre>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button id="bk-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
+            <a data-i18n="pz_dm" class="pill" style="font-size:13px;background:#201A17;color:#FAF4E8;--sh:#9a8f83" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Open Instagram → @hypertobi</a>
+            <span id="bk-note" class="copied-note"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="pill pill--footer" data-i18n="footer_hi" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Say hi → @hypertobi</a>
+    <div class="made" data-i18n="footer_made">Handmade website — yes, I build these too.</div>
+  </footer>
+
+</div>
+<script type="module" src="/src/main-pizza.js"></script>
+</body>
+</html>

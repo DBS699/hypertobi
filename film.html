@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperfilm — Your film, developed with love.</title>
+<meta name="description" content="A small analog film lab: C-41 & B&W development, push/pull, high-res scans. Drop off your rolls, get your memories back.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page" data-accent="#8A63D2" style="--accent:#8A63D2">
+
+  <div class="paper-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="Hypertobi home"><span class="logo-letter tt tt--pizza" style="--rot:-8deg">H</span><span class="logo-letter tt tt--film" style="--rot:6deg">Y</span><span class="logo-letter tt tt--foto" style="--rot:-6deg">P</span><span class="logo-letter tt tt--web" style="--rot:8deg">E</span><span class="logo-letter tt tt--pizza" style="--rot:-7deg">R</span><span class="logo-letter tt tt--film" style="--rot:7deg">T</span><span class="logo-letter tt tt--foto" style="--rot:-6deg">O</span><span class="logo-letter tt tt--web" style="--rot:6deg">B</span><span class="logo-letter tt tt--pizza" style="--rot:-8deg">I</span></a>
+    <div class="nav-links">
+      <a class="nav-link" data-c="pizza" href="/pizza.html"><span data-i18n="nav_pizza">Pizza &amp; Workshops</span></a>
+      <a class="nav-link active" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
+      <a class="nav-link" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
+      <a class="nav-link" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
+      <a class="nav-link" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <div class="lang-toggle">
+        <button data-lang="de">DE</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" data-scroll="hero">
+    <div class="hero-row">
+      <div>
+        <span class="brand tt tt--film" data-anim="letters"><span style="display:inline-block">H</span><span style="display:inline-block">Y</span><span style="display:inline-block">P</span><span style="display:inline-block">E</span><span style="display:inline-block">R</span><span style="display:inline-block">F</span><span style="display:inline-block">I</span><span style="display:inline-block">L</span><span style="display:inline-block">M</span></span>
+        <h1 data-anim="h1"><span class="tt tt--lg tt--ink" data-i18n="fl_h1a">Your film,</span><br><span class="tt tt--lg tt--film" data-i18n="fl_h1b">developed with love.</span></h1>
+        <p class="sub" data-i18n="fl_sub" data-anim="sub">A small analog lab. Drop off your rolls, get your memories back — developed, scanned, done.</p>
+      </div>
+      <div class="model-slot" id="model-slot" data-anim="pop" style="align-self:flex-end"></div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- SERVICES -->
+    <div style="background:#ECE4F8;border:2px solid #201A17;border-radius:22px;box-shadow:6px 6px 0 #8A63D2;padding:24px">
+      <div class="grid-4">
+        <div class="mini-card" data-anim="card">
+          <div class="chip-badge" style="background:#5E3FA6">C-41</div>
+          <div class="t" data-i18n="fl_s1t">C-41 color negative</div>
+          <div class="b" data-i18n="fl_s1b">The standard for color film — fresh chemistry, consistent results.</div>
+        </div>
+        <div class="mini-card" data-anim="card">
+          <div class="chip-badge" style="background:#201A17">B&amp;W</div>
+          <div class="t" data-i18n="fl_s2t">B&amp;W development</div>
+          <div class="b" data-i18n="fl_s2b">Classic black &amp; white, developed by hand, tank by tank.</div>
+        </div>
+        <div class="mini-card" data-anim="card">
+          <div class="chip-badge" style="background:#8A63D2">±EV</div>
+          <div class="t" data-i18n="fl_s3t">Push / pull</div>
+          <div class="b" data-i18n="fl_s3b">Shot at 1600? No problem. Tell me how you exposed it.</div>
+        </div>
+        <div class="mini-card" data-anim="card">
+          <div class="chip-badge" style="background:#2E5BFF">SCAN</div>
+          <div class="t" data-i18n="fl_s4t">Scanning</div>
+          <div class="b" data-i18n="fl_s4b">High-res scans, dust-checked, delivered as a download link.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="card" data-anim="card" data-shatter style="background:#201A17;color:#FAF4E8;box-shadow:6px 6px 0 #8A63D2">
+      <h2 data-i18n="fl_how" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;letter-spacing:-1px;margin:0 0 20px">How it works</h2>
+      <div class="grid-3" data-anim-alt style="gap:14px">
+        <div class="step-box" style="border:2px dashed #B79AE8">
+          <span class="n" style="color:#B79AE8">1</span>
+          <span class="t" data-i18n="fl_h1s">Drop off or send your rolls</span>
+        </div>
+        <div class="step-box" style="border:2px dashed #B79AE8">
+          <span class="n" style="color:#B79AE8">2</span>
+          <span class="t" data-i18n="fl_h2s">I develop &amp; scan them</span>
+        </div>
+        <div class="step-box" style="border:2px dashed #B79AE8">
+          <span class="n" style="color:#B79AE8">3</span>
+          <span class="t" data-i18n="fl_h3s">You get a download link</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px">
+        <span data-i18n="fl_price" style="font-size:13.5px;color:#c9beb2">Prices depend on film &amp; batch size — DM me for the current list.</span>
+        <a href="https://instagram.com/hypertobi" target="_blank" rel="noopener" class="pill" style="font-size:13.5px;border-color:#B79AE8;background:#B79AE8;color:#201A17;--sh:rgba(183,154,232,.35)">DM @hypertobi</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="pill pill--footer" data-i18n="footer_hi" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Say hi → @hypertobi</a>
+    <div class="made" data-i18n="footer_made">Handmade website — yes, I build these too.</div>
+  </footer>
+
+</div>
+<script type="module" src="/src/main-film.js"></script>
+</body>
+</html>

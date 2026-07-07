@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hypertobi — One Tobi. Four very good things.</title>
+<meta name="description" content="Neapolitan pizza catering & workshops, an analog film lab, photography on real film — and simple, reliable websites. Homemade in Switzerland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page" data-accent="#201A17">
+
+  <!-- wrapping-paper texture (whole page) -->
+  <div class="paper-overlay"></div>
+
+  <!-- OVEN INTRO (curtain; enabled via MODE in src/js/oven.js) -->
+  <div id="oven-intro" class="oven-intro" hidden>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:30px;padding:20px">
+      <div style="position:relative;width:660px;max-width:92vw;height:330px">
+        <div data-ov="oven" style="position:absolute;right:0;bottom:0;width:320px;height:300px;background:#201A17;border-radius:22px;box-shadow:8px 8px 0 #d9cfc0">
+          <div style="position:absolute;top:-24px;left:44px;width:34px;height:26px;background:#201A17;border-radius:8px 8px 0 0"></div>
+          <div style="position:absolute;top:20px;left:0;right:0;text-align:center;font-family:'Press Start 2P',monospace;font-size:9px;color:#FAF4E8;letter-spacing:2px">450°C</div>
+          <div style="position:absolute;left:50%;transform:translateX(-50%);bottom:24px;width:224px;height:132px;border-radius:118px 118px 10px 10px;background:radial-gradient(ellipse at 50% 88%,#3a140a 0%,#150804 72%);overflow:hidden">
+            <div data-ov="glow" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 96%,rgba(232,64,42,.9),rgba(232,64,42,0) 62%);opacity:.22"></div>
+            <div style="position:absolute;bottom:-6px;left:0;right:0;display:flex;justify-content:center;align-items:flex-end;gap:5px">
+              <div data-ov="flame" style="transform:scale(0)"><div style="width:18px;height:26px;border-radius:50% 50% 45% 45%;background:linear-gradient(180deg,#FFB84D,#E8402A);animation:flameFlick .45s ease-in-out infinite alternate"></div></div>
+              <div data-ov="flame" style="transform:scale(0)"><div style="width:20px;height:36px;border-radius:50% 50% 45% 45%;background:linear-gradient(180deg,#E17BA4,#E8402A);animation:flameFlick .52s ease-in-out -.2s infinite alternate"></div></div>
+              <div data-ov="flame" style="transform:scale(0)"><div style="width:22px;height:44px;border-radius:50% 50% 45% 45%;background:linear-gradient(180deg,#FFB84D,#E8402A);animation:flameFlick .4s ease-in-out -.1s infinite alternate"></div></div>
+              <div data-ov="flame" style="transform:scale(0)"><div style="width:20px;height:36px;border-radius:50% 50% 45% 45%;background:linear-gradient(180deg,#8A63D2,#E8402A);animation:flameFlick .5s ease-in-out -.32s infinite alternate"></div></div>
+              <div data-ov="flame" style="transform:scale(0)"><div style="width:18px;height:26px;border-radius:50% 50% 45% 45%;background:linear-gradient(180deg,#FFB84D,#E8402A);animation:flameFlick .47s ease-in-out -.15s infinite alternate"></div></div>
+            </div>
+          </div>
+        </div>
+        <div data-ov="peelgrp" data-oven-bake title="Bake!" style="position:absolute;left:0;bottom:60px;display:flex;align-items:center;cursor:pointer">
+          <div style="width:110px;height:14px;background:#B07B3E;border:2px solid #201A17;border-radius:8px 0 0 8px"></div>
+          <div style="width:150px;height:150px;background:#D9A05B;border:2px solid #201A17;border-radius:50%;margin-left:-6px;display:flex;align-items:center;justify-content:center">
+            <div data-ov="pizza" style="width:118px;height:118px;border-radius:50%;background:#E8B96D;border:2px solid #c98d3f;display:flex;align-items:center;justify-content:center">
+              <div style="position:relative;width:90px;height:90px;border-radius:50%;background:#E8402A;display:flex;align-items:center;justify-content:center">
+                <div style="width:72px;height:72px;border-radius:50%;background:#F7D488;position:relative">
+                  <div style="position:absolute;top:12px;left:14px;width:15px;height:15px;border-radius:50%;background:#E8402A"></div>
+                  <div style="position:absolute;top:14px;right:12px;width:15px;height:15px;border-radius:50%;background:#8A63D2"></div>
+                  <div style="position:absolute;bottom:14px;left:18px;width:15px;height:15px;border-radius:50%;background:#E17BA4"></div>
+                  <div style="position:absolute;bottom:12px;right:16px;width:15px;height:15px;border-radius:50%;background:#2E5BFF"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+        <div style="font-family:'Press Start 2P',monospace;font-size:9px;letter-spacing:2px;color:#6B6157">WOOD-FIRED · 450°C</div>
+        <div data-i18n="oven_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;letter-spacing:-1px;color:#201A17">First, a pizza goes in the oven.</div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <button data-i18n="oven_cta" data-oven-bake class="pill" style="--s:4px;--s2:6px;--lift:-2px;background:#E8402A;color:#fff;font-size:16px;padding:13px 28px">Bake it →</button>
+          <button data-i18n="oven_skip" data-oven-skip style="font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;border:none;background:transparent;color:#6B6157;cursor:pointer;text-decoration:underline">skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="Hypertobi home"><span class="logo-letter tt tt--pizza" style="--rot:-8deg">H</span><span class="logo-letter tt tt--film" style="--rot:6deg">Y</span><span class="logo-letter tt tt--foto" style="--rot:-6deg">P</span><span class="logo-letter tt tt--web" style="--rot:8deg">E</span><span class="logo-letter tt tt--pizza" style="--rot:-7deg">R</span><span class="logo-letter tt tt--film" style="--rot:7deg">T</span><span class="logo-letter tt tt--foto" style="--rot:-6deg">O</span><span class="logo-letter tt tt--web" style="--rot:6deg">B</span><span class="logo-letter tt tt--pizza" style="--rot:-8deg">I</span></a>
+    <div class="nav-links">
+      <a class="nav-link tt tt--pizza" data-c="pizza" href="/pizza.html"><span data-i18n="nav_pizza">Pizza &amp; Workshops</span></a>
+      <a class="nav-link tt tt--film" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
+      <a class="nav-link tt tt--foto" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
+      <a class="nav-link tt tt--web" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
+      <a class="nav-link tt tt--pizza" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <div class="lang-toggle">
+        <button data-lang="de">DE</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero hero--home" data-scroll="hero">
+    <div class="kicker" data-i18n="home_kicker" data-anim="kicker">@HYPERTOBI · HOMEMADE IN SWITZERLAND</div>
+    <h1 data-anim="h1">
+      <span class="tt tt--lg tt--ink" data-i18n="home_h1a">One Tobi.</span><br>
+      <span class="tt tt--lg tt--pizza" data-i18n="home_h1b">Four</span> <span class="tt tt--lg tt--film" data-i18n="home_h1c">very</span> <span class="tt tt--lg tt--foto" data-i18n="home_h1d">good</span> <span class="tt tt--lg tt--web" data-i18n="home_h1e">things.</span>
+    </h1>
+    <p class="sub" data-i18n="home_sub" data-anim="sub">Neapolitan pizza catering &amp; workshops, an analog film lab, photography on real film — and simple, reliable websites. Pick a counter, everything is homemade.</p>
+  </header>
+
+  <!-- TILES -->
+  <main class="main" style="padding-top:0">
+    <div class="tile-grid">
+
+      <!-- PIZZA (peelable) -->
+      <div class="tile-wrap span-4" data-anim="tile" data-shatter data-peel="L">
+        <div class="tile-photo"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1400&q=70" alt="Wood-fired pizza oven in action" loading="lazy"></div>
+        <div class="tile-face">
+          <a class="tile tile--pizza" href="/pizza.html">
+            <div class="tile-title">HYPERPIZZA</div>
+            <div class="tile-desc" data-i18n="tile_pizza_desc">Neapolitan catering for your event + pizza workshops &amp; teambuilding. Wood-fired, 450°C, made live.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span data-i18n="tile_pizza_links" style="font-size:13px;font-weight:700">Catering · Workshops · Booking</span>
+              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px">→</span>
+            </div>
+          </a>
+        </div>
+        <div class="peel-corner peel-corner--br" role="button" aria-label="Peel" title="Peel"></div>
+      </div>
+
+      <!-- FILM (peelable) -->
+      <div class="tile-wrap span-2" data-anim="tile" data-shatter data-peel="R">
+        <div class="tile-photo"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=70" alt="Film negatives in the lab" loading="lazy"></div>
+        <div class="tile-face">
+          <a class="tile tile--film" href="/film.html">
+            <div class="tile-title">HYPER<br>FILM</div>
+            <div class="tile-desc" data-i18n="tile_film_desc">C-41 &amp; B&amp;W development, push/pull, scans.</div>
+            <div class="tile-arrow">→</div>
+          </a>
+        </div>
+        <div class="peel-corner peel-corner--bl" role="button" aria-label="Peel" title="Peel"></div>
+      </div>
+
+      <!-- FOTO (peelable) -->
+      <div class="tile-wrap span-3" data-anim="tile" data-shatter data-peel="L">
+        <div class="tile-photo"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1000&q=70" alt="Analog landscape photo" loading="lazy"></div>
+        <div class="tile-face">
+          <a class="tile tile--foto" href="/foto.html">
+            <div class="tile-title">HYPER<br>FOTO</div>
+            <div class="tile-desc" data-i18n="tile_foto_desc">My analog work, on real film. Prints available.</div>
+            <div class="tile-arrow">→</div>
+          </a>
+        </div>
+        <div class="peel-corner peel-corner--br" role="button" aria-label="Peel" title="Peel"></div>
+      </div>
+
+      <!-- WEB (peelable) -->
+      <div class="tile-wrap span-3" data-anim="tile" data-shatter data-peel="R">
+        <div class="tile-photo"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=70" alt="Website code on a laptop" loading="lazy"></div>
+        <div class="tile-face">
+          <a class="tile tile--web" href="/web.html">
+            <div class="tile-title">HYPER<br>WEB</div>
+            <div class="tile-desc" data-i18n="tile_web_desc">Simple, affordable, reliable websites.</div>
+            <div class="tile-arrow">→</div>
+          </a>
+        </div>
+        <div class="peel-corner peel-corner--bl" role="button" aria-label="Peel" title="Peel"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="pill pill--footer" data-i18n="footer_hi" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Say hi → @hypertobi</a>
+    <div class="made" data-i18n="footer_made">Handmade website — yes, I build these too.</div>
+  </footer>
+
+</div>
+<script type="module" src="/src/main-home.js"></script>
+</body>
+</html>
