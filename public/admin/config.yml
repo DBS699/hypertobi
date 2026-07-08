@@ -2,7 +2,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # Edits made here are committed to the GitHub repo; Vercel rebuilds → live.
 # BEFORE LOGIN WORKS (one-time, see README.md):
-#   1. create a GitHub OAuth App (callback: https://<domain>/api/callback)
+#   1. create a GitHub OAuth App (callback: https://hypertobi.ch/api/callback)
 #   2. set GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET in the Vercel project
 #   3. make sure the repo below is connected to the Vercel project
 
@@ -10,11 +10,11 @@ backend:
   name: github
   repo: DBS699/hypertobi
   branch: main
-  base_url: https://hypertobi.vercel.app
+  base_url: https://hypertobi.ch
   auth_endpoint: /api/auth
 
-site_url: https://hypertobi.vercel.app
-display_url: https://hypertobi.vercel.app
+site_url: https://hypertobi.ch
+display_url: https://hypertobi.ch
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
