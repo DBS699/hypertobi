@@ -233,7 +233,32 @@ export function apply(lang) {
     el.style.color = active ? '#FAF4E8' : '#6B6157';
   });
   document.documentElement.lang = lang;
+  fitHeroH1();
 }
+
+/* keep each hero headline span on ONE line: the spans never wrap
+   (white-space: nowrap in CSS) — instead the whole h1 shrinks until the
+   longest line fits. German lines are much longer than English ones. */
+export function fitHeroH1() {
+  const h1 = document.querySelector('.hero h1');
+  if (!h1) return;
+  h1.style.fontSize = '';                        /* back to the CSS clamp() */
+  const spans = [...h1.querySelectorAll(':scope > span')];
+  if (!spans.length) return;
+  const fits = () => spans.every((sp) => sp.scrollWidth <= h1.clientWidth + 1);
+  let size = parseFloat(getComputedStyle(h1).fontSize);
+  let guard = 40;
+  while (!fits() && size > 24 && guard--) {
+    size -= 2;
+    h1.style.fontSize = size + 'px';
+  }
+}
+let fitQueued = false;
+window.addEventListener('resize', () => {
+  if (fitQueued) return;
+  fitQueued = true;
+  requestAnimationFrame(() => { fitQueued = false; fitHeroH1(); });
+}, { passive: true });
 
 export function set(lang) {
   try { localStorage.setItem(KEY, lang); } catch (e) { /* ignore */ }

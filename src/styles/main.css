@@ -110,6 +110,8 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
   font-size: clamp(44px, 6.5vw, 80px); line-height: 1;
   letter-spacing: -2.5px; margin: 24px 0 0;
 }
+/* each headline span is one line — fitHeroH1() shrinks the font instead */
+.hero h1 > span { white-space: nowrap; }
 .hero .sub { font-size: 17px; line-height: 1.6; max-width: 560px; margin: 20px 0 0; }
 .hero--home { text-align: center; padding: 76px 40px 48px; }
 .hero--home .kicker { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--muted); }
