@@ -66,13 +66,19 @@ const D = {
   wb_pf_visit: { en: "Visit site ↗", de: "Website öffnen ↗", fr: "Voir le site ↗", it: "Apri il sito ↗" },
 
 /* ===== film: dev run + sign-up ===== */
+  fld_s1: { en: "Sign up while there's a free slot — form below", de: "Schreib dich ein, solange es Platz hat — Formular unten", fr: "Inscris-toi tant qu'il y a de la place — formulaire ci-dessous", it: "Iscriviti finché c'è posto — modulo qui sotto" },
+  fld_s2: { en: "Drop your films in the mailbox", de: "Wirf deine Filme in den Briefkasten", fr: "Dépose tes films dans la boîte aux lettres", it: "Lascia i rullini nella cassetta" },
+  fld_s3: { en: "I develop & scan them", de: "Ich entwickle und scanne sie", fr: "Je les développe et les scanne", it: "Li sviluppo e li scansiono" },
+  fld_s4: { en: "You get your scans as a download link", de: "Du erhältst deine Scans als Download-Link", fr: "Tu reçois tes scans par lien de téléchargement", it: "Ricevi le scansioni via link" },
+  fld_mail: { en: "Send email → boschungservices@gmail.com", de: "E-Mail senden → boschungservices@gmail.com", fr: "Envoyer l'e-mail → boschungservices@gmail.com", it: "Invia e-mail → boschungservices@gmail.com" },
+
   fld_next: { en: "Next development run", de: "Nächste Entwicklung", fr: "Prochain développement", it: "Prossimo sviluppo" },
   fld_drop_hint: { en: "Drop your films in the mailbox before that day —", de: "Wirf deine Filme bis dahin in den Briefkasten —", fr: "Dépose tes films dans la boîte aux lettres d'ici là —", it: "Lascia i tuoi rullini nella cassetta entro quella data —" },
   fld_perroll: { en: "per roll incl. development & scans", de: "pro Film inkl. Entwicklung & Scans", fr: "par pellicule, développement & scans inclus", it: "a rullino incl. sviluppo & scansioni" },
   fld_slots: { en: "slots still free", de: "Plätze noch frei", fr: "places encore libres", it: "posti ancora liberi" },
   fld_cta: { en: "Reserve a slot ↓", de: "Platz sichern ↓", fr: "Réserver une place ↓", it: "Prenota un posto ↓" },
   fld_form_title: { en: "Sign up for the run", de: "Für die Entwicklung anmelden", fr: "S'inscrire au développement", it: "Iscriviti allo sviluppo" },
-  fld_form_body: { en: "Fill in the form, send it as a DM — your slot is confirmed by reply. Then drop your films in the mailbox:", de: "Formular ausfüllen, als DM schicken — dein Platz wird per Antwort bestätigt. Danach die Filme in den Briefkasten:", fr: "Remplis le formulaire, envoie-le en DM — ta place est confirmée par réponse. Ensuite dépose tes films dans la boîte :", it: "Compila il modulo, invialo come DM — il tuo posto viene confermato con la risposta. Poi lascia i rullini nella cassetta:" },
+  fld_form_body: { en: "Fill in the form and send it by email — your slot is confirmed by reply. Then drop your films in the mailbox:", de: "Formular ausfüllen und per E-Mail abschicken — dein Platz wird per Antwort bestätigt. Danach die Filme in den Briefkasten:", fr: "Remplis le formulaire et envoie-le par e-mail — ta place est confirmée par réponse. Ensuite dépose tes films dans la boîte :", it: "Compila il modulo e invialo per e-mail — il tuo posto viene confermato con la risposta. Poi lascia i rullini nella cassetta:" },
   fld_box_t: { en: "📮 Drop-off mailbox (24/7)", de: "📮 Abgabe-Briefkasten (24/7)", fr: "📮 Boîte de dépôt (24/7)", it: "📮 Cassetta di consegna (24/7)" },
   fld_box_1: { en: "Films unpacked (no boxes), together in one envelope", de: "Filme ausgepackt (ohne Schachteln), zusammen in einem Couvert", fr: "Pellicules déballées (sans boîtes), ensemble dans une enveloppe", it: "Rullini senza scatole, insieme in una busta" },
   fld_box_2: { en: "Write the same name on it as in the form", de: "Denselben Namen draufschreiben wie im Formular", fr: "Écris le même nom que dans le formulaire", it: "Scrivi lo stesso nome del modulo" },

@@ -25,7 +25,7 @@ initModelAmbient({
 /* CMS-managed dev-run date + slots */
 applyFilmRun();
 
-/* dev-run sign-up -> Instagram DM message */
+/* dev-run sign-up -> email to boschungservices@gmail.com */
 wireCompose({
   trigger: document.getElementById('fd-send'),
   box: document.getElementById('fd-box'),
@@ -41,4 +41,13 @@ wireCompose({
     'Format: ' + val('fd-format') + '\n' +
     'Push/Pull: ' + val('fd-push') + '\n' +
     'Bemerkungen: ' + val('fd-msg')
+});
+
+/* fill the mailto link whenever the message box is (re)built */
+document.getElementById('fd-send').addEventListener('click', () => {
+  const msg = document.getElementById('fd-msg-out').textContent;
+  const mail = document.getElementById('fd-mail');
+  mail.href = 'mailto:boschungservices@gmail.com'
+    + '?subject=' + encodeURIComponent('Anmeldung Filmentwicklung — ' + (document.getElementById('fd-name').value || ''))
+    + '&body=' + encodeURIComponent(msg);
 });
