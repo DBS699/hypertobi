@@ -9,7 +9,7 @@ const D = {
   footer_hi: { en: "Say hi → @hypertobi", de: "Sag hallo → @hypertobi", fr: "Dis bonjour → @hypertobi", it: "Saluta → @hypertobi" },
   footer_made: { en: "Handmade website — yes, I build these too.", de: "Handgemachte Website — ja, sowas baue ich auch.", fr: "Site fait main — oui, j'en fais aussi.", it: "Sito fatto a mano — sì, faccio anche questi." },
   footer_legal: { en: "© 2026 Boschung Services · sole proprietorship of Tobias Boschung", de: "© 2026 Boschung Services · Einzelunternehmen von Tobias Boschung", fr: "© 2026 Boschung Services · entreprise individuelle de Tobias Boschung", it: "© 2026 Boschung Services · ditta individuale di Tobias Boschung" },
-  footer_imprint: { en: "Legal notice", de: "Impressum", fr: "Mentions légales", it: "Note legali" },
+  footer_imprint: { en: "Impressum", de: "Impressum", fr: "Impressum", it: "Impressum" },
   view3d: { en: "View in 3D", de: "In 3D ansehen", fr: "Voir en 3D", it: "Guarda in 3D" },
 
   /* ===== home ===== */
