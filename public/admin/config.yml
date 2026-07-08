@@ -57,3 +57,19 @@ collections:
           - { name: next_date_label, label: "Date of the next run (free text, e.g. 'Samstag, 19. Juli 2026')", widget: string }
           - { name: slots_free, label: "Slots still free", widget: number, value_type: int, min: 0 }
           - { name: slots_total, label: "Slots total", widget: number, value_type: int, min: 1 }
+
+  - name: portfolio
+    label: "Web portfolio"
+    files:
+      - name: sites
+        label: "Portfolio sites"
+        file: "public/content/portfolio.json"
+        fields:
+          - label: "Sites"
+            name: sites
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Name", widget: string }
+              - { name: url, label: "URL (https://…)", widget: string }
+              - { name: tag, label: "Short tag line", widget: string }

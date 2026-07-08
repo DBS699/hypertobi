@@ -1,0 +1,7 @@
+{
+  "sites": [
+    { "name": "Casa d'Italia", "url": "https://casa-italia.vercel.app", "tag": "Club website · CMS" },
+    { "name": "DOBOJO", "url": "https://dobojo.vercel.app", "tag": "Artist portfolio · 4 languages" },
+    { "name": "Coolinarik", "url": "https://coolinari-revamp.vercel.app", "tag": "Food blog revamp · CMS" }
+  ]
+}

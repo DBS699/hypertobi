@@ -3,6 +3,7 @@ import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { initShatter } from './js/shatter.js';
 import { initModelAmbient } from './js/model-reveal.js';
+import { applyPortfolio } from './js/content.js';
 
 initI18n();
 runIntro(document.querySelector('.page'));
@@ -39,3 +40,6 @@ async function winkOnce() {
   else mv.addEventListener('load', () => setTimeout(doWink, 800), { once: true });
 }
 setTimeout(winkOnce, 1500);
+
+/* CMS-managed live portfolio */
+applyPortfolio();

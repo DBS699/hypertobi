@@ -61,6 +61,10 @@ const D = {
   pz_dm: { en: "Open Instagram → @hypertobi", de: "Instagram öffnen → @hypertobi", fr: "Ouvrir Instagram → @hypertobi", it: "Apri Instagram → @hypertobi" },
   pz_arcade_t: { en: "Cook the perfect pizza, win a real one.", de: "Koch die perfekte Pizza, gewinn eine echte.", fr: "Cuisine la pizza parfaite, gagnes-en une vraie.", it: "Cucina la pizza perfetta, vincine una vera." },
 
+  wb_pf_t: { en: "Live from the portfolio.", de: "Live aus dem Portfolio.", fr: "En direct du portfolio.", it: "Dal portfolio, dal vivo." },
+  wb_pf_sub: { en: "These are real client sites, loading live right here — click one to visit it.", de: "Das sind echte Kunden-Websites, die hier live laden — klick drauf, um sie zu besuchen.", fr: "De vrais sites clients, chargés en direct ici — clique pour les visiter.", it: "Siti reali di clienti, caricati dal vivo qui — clicca per visitarli." },
+  wb_pf_visit: { en: "Visit site ↗", de: "Website öffnen ↗", fr: "Voir le site ↗", it: "Apri il sito ↗" },
+
 /* ===== film: dev run + sign-up ===== */
   fld_next: { en: "Next development run", de: "Nächste Entwicklung", fr: "Prochain développement", it: "Prossimo sviluppo" },
   fld_drop_hint: { en: "Drop your films in the mailbox before that day —", de: "Wirf deine Filme bis dahin in den Briefkasten —", fr: "Dépose tes films dans la boîte aux lettres d'ici là —", it: "Lascia i tuoi rullini nella cassetta entro quella data —" },

@@ -60,3 +60,45 @@ export async function applyFilmRun() {
     }
   } catch (e) { /* keep defaults */ }
 }
+
+/* web portfolio: sync cards from JSON, then scale the live iframes to fit */
+export async function applyPortfolio() {
+  const grid = document.querySelector('.pf-grid');
+  if (!grid) return;
+  try {
+    const res = await fetch('/content/portfolio.json');
+    if (res.ok) {
+      const { sites } = await res.json();
+      if (Array.isArray(sites) && sites.length) {
+        let cards = [...grid.querySelectorAll('.pf-card')];
+        while (cards.length < sites.length) {
+          const clone = cards[cards.length - 1].cloneNode(true);
+          cards[cards.length - 1].after(clone);
+          cards = [...grid.querySelectorAll('.pf-card')];
+        }
+        while (cards.length > sites.length) cards.pop().remove();
+        sites.forEach((site, i) => {
+          const card = cards[i];
+          card.href = site.url;
+          card.querySelector('.pf-url').textContent = site.url.replace(/^https?:\/\//, '');
+          const fr = card.querySelector('iframe');
+          if (fr.src !== site.url) fr.src = site.url;
+          fr.title = site.name + ' — live preview';
+          card.querySelector('.pf-meta strong').textContent = site.name;
+          card.querySelector('.pf-tag').textContent = site.tag || '';
+        });
+      }
+    }
+  } catch (e) { /* keep the static defaults */ }
+
+  const scale = () => {
+    document.querySelectorAll('.pf-view').forEach((view) => {
+      const fr = view.querySelector('iframe');
+      const k = view.clientWidth / 1280;
+      fr.style.transform = 'scale(' + k + ')';
+      fr.style.height = Math.ceil(view.clientHeight / k) + 'px';
+    });
+  };
+  scale();
+  window.addEventListener('resize', scale, { passive: true });
+}
