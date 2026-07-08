@@ -46,3 +46,14 @@ collections:
           - { name: pk1_price, label: "Aperitivo — CHF / person", widget: string, hint: "number only, e.g. 22" }
           - { name: pk2_price, label: "La Festa — CHF / person", widget: string }
           - { name: pk3_price, label: "Matrimonio — CHF / person (from)", widget: string }
+
+  - name: film
+    label: "Film lab (dev run)"
+    files:
+      - name: devrun
+        label: "Next development run"
+        file: "public/content/film.json"
+        fields:
+          - { name: next_date_label, label: "Date of the next run (free text, e.g. 'Samstag, 19. Juli 2026')", widget: string }
+          - { name: slots_free, label: "Slots still free", widget: number, value_type: int, min: 0 }
+          - { name: slots_total, label: "Slots total", widget: number, value_type: int, min: 1 }

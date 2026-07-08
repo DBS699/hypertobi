@@ -43,3 +43,20 @@ export async function applyPizzaPrices() {
     });
   } catch (e) { /* keep defaults */ }
 }
+
+/* film lab: next dev run date + free slots */
+export async function applyFilmRun() {
+  try {
+    const res = await fetch('/content/film.json');
+    if (!res.ok) return;
+    const d = await res.json();
+    const set = (k, v) => document.querySelectorAll('[data-film="' + k + '"]').forEach((el) => { el.textContent = v; });
+    if (d.next_date_label) set('date', d.next_date_label);
+    if (d.slots_free != null) set('free', d.slots_free);
+    if (d.slots_total != null) set('total', d.slots_total);
+    if (Number(d.slots_free) <= 0) {
+      const badge = document.querySelector('.devrun-slots');
+      if (badge) badge.classList.add('devrun-slots--full');
+    }
+  } catch (e) { /* keep defaults */ }
+}

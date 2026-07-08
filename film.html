@@ -72,6 +72,61 @@
       </div>
     </div>
 
+    <!-- NEXT DEV RUN -->
+    <section class="card" data-anim="card" style="background:#8A63D2;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span data-i18n="fld_next" style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;opacity:.85">Next development run</span>
+        <span data-film="date" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3.4vw,38px);letter-spacing:-1px">Samstag, 19. Juli 2026</span>
+        <span style="font-size:13.5px;opacity:.9"><span data-i18n="fld_drop_hint">Drop your films in the mailbox before that day —</span> CHF 20 <span data-i18n="fld_perroll">per roll incl. development &amp; scans</span></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <div class="devrun-slots" style="background:#fff;color:#201A17;border:2px solid #201A17;border-radius:14px;padding:12px 18px;text-align:center;box-shadow:4px 4px 0 #201A17">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;line-height:1"><span data-film="free">8</span>/<span data-film="total">12</span></div>
+          <div data-i18n="fld_slots" style="font-size:11.5px;font-weight:700">slots still free</div>
+        </div>
+        <a href="#devrun" data-i18n="fld_cta" class="pill" style="color:#8A63D2;padding:11px 22px;white-space:nowrap">Reserve a slot ↓</a>
+      </div>
+    </section>
+
+    <!-- SIGN-UP + DROP-OFF -->
+    <section id="devrun" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:36px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <h2 data-i18n="fld_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;letter-spacing:-1.5px;line-height:1.05;margin:0">Sign up for the run</h2>
+        <p data-i18n="fld_form_body" style="font-size:14px;line-height:1.65;margin:0;color:#4a423c">Fill in the form, send it as a DM — your slot is confirmed by reply. Then drop your films in the mailbox:</p>
+        <div style="border:2px solid #201A17;border-radius:14px;padding:16px 18px;background:#F5EEE2">
+          <div data-i18n="fld_box_t" style="font-weight:800;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;margin-bottom:6px">📮 Drop-off mailbox (24/7)</div>
+          <div style="font-size:14.5px;font-weight:700">Effingerstrasse 103, 3008 Bern</div>
+          <ul style="margin:10px 0 0;padding-left:18px;font-size:13px;line-height:1.7;color:#4a423c">
+            <li data-i18n="fld_box_1">Films unpacked (no boxes), together in one envelope</li>
+            <li data-i18n="fld_box_2">Write the same name on it as in the form</li>
+            <li data-i18n="fld_box_3">Payment by TWINT after confirmation</li>
+          </ul>
+        </div>
+        <p data-i18n="fld_price_note" style="font-size:12.5px;line-height:1.6;margin:0;color:#6B6157">CHF 20 per roll — C-41 or B&amp;W, development + scans as JPEG via download link. Push/pull +1/+2 stops no problem, just pick it in the form.</p>
+      </div>
+      <div>
+        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label class="field"><span data-i18n="fld_l_name">Your name</span><input id="fd-name" type="text"></label>
+          <label class="field"><span data-i18n="fld_l_email">Email</span><input id="fd-email" type="email"></label>
+          <label class="field"><span data-i18n="fld_l_count">Number of rolls</span><input id="fd-count" type="number" min="1" value="1"></label>
+          <label class="field"><span data-i18n="fld_l_type">Film type</span><select id="fd-type"><option value="C-41 (Farbe)">C-41 (colour)</option><option value="S/W">B&amp;W</option><option value="Gemischt">Mixed</option></select></label>
+          <label class="field"><span data-i18n="fld_l_format">Format</span><select id="fd-format"><option value="35mm">35mm</option><option value="120">120</option><option value="Gemischt">Mixed</option></select></label>
+          <label class="field"><span data-i18n="fld_l_push">Push / Pull</span><select id="fd-push"><option value="Nein">No</option><option value="+1">+1</option><option value="+2">+2</option><option value="-1">−1</option></select></label>
+          <label class="field" style="grid-column:span 2"><span data-i18n="fld_l_msg">Notes</span><textarea id="fd-msg" rows="2" data-i18n-ph="fld_ph_msg" placeholder="Special wishes? (TIFF scans, cut negatives…)"></textarea></label>
+        </div>
+        <button id="fd-send" data-i18n="fld_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#8A63D2;color:#fff">Compose my sign-up</button>
+
+        <div id="fd-box" class="compose-box" hidden style="margin-top:20px">
+          <pre id="fd-msg-out"></pre>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button id="fd-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
+            <a data-i18n="pz_dm" class="pill" style="font-size:13px;background:#201A17;color:#FAF4E8;--sh:#9a8f83" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Open Instagram → @hypertobi</a>
+            <span id="fd-note" class="copied-note"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- HOW IT WORKS -->
     <section class="card" data-anim="card" data-shatter style="background:#201A17;color:#FAF4E8;box-shadow:6px 6px 0 #8A63D2">
       <h2 data-i18n="fl_how" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;letter-spacing:-1px;margin:0 0 20px">How it works</h2>
