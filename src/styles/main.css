@@ -449,15 +449,17 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 }
 .arcade-link:hover { background: var(--pizza); color: #fff; }
 
-/* ---- paper theme toggle (lime -> soft sky -> cool silver) ---- */
+/* ---- paper theme picker (lime / soft sky / cool silver) ---- */
 html[data-paper="sky"] { --paper: #DCE8F2; }
 html[data-paper="silver"] { --paper: #E4E6E9; }
-.paper-toggle {
-  width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--ink);
-  box-shadow: 2px 2px 0 var(--ink); cursor: pointer; flex: none; padding: 0;
+.paper-picker { display: flex; gap: 8px; align-items: center; flex: none; }
+.paper-dot {
+  width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--ink);
+  cursor: pointer; padding: 0; box-shadow: 2px 2px 0 var(--ink);
   transition: transform 0.15s ease;
 }
-.paper-toggle:hover { transform: translateY(-2px); }
+.paper-dot:hover { transform: translateY(-2px); }
+.paper-dot.on { outline: 3px solid var(--ink); outline-offset: 2px; }
 
 /* ---- mobile hamburger ---- */
 .nav-burger {

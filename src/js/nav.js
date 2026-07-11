@@ -15,10 +15,6 @@ function currentPaper() {
     return PAPERS.some((p) => p.id === v) ? v : 'lime';
   } catch (e) { return 'lime'; }
 }
-function nextPaper() {
-  const i = PAPERS.findIndex((p) => p.id === currentPaper());
-  return PAPERS[(i + 1) % PAPERS.length];
-}
 function applyPaper(mode) {
   if (mode === 'lime') document.documentElement.removeAttribute('data-paper');
   else document.documentElement.setAttribute('data-paper', mode);
@@ -31,21 +27,35 @@ function init() {
   const links = nav.querySelector('.nav-links');
   if (!links) return;
 
-  /* round swatch showing the color you would switch TO */
-  const swatch = document.createElement('button');
-  swatch.type = 'button';
-  swatch.className = 'paper-toggle';
-  swatch.setAttribute('aria-label', 'Hintergrundfarbe wechseln');
-  swatch.title = 'Hintergrundfarbe wechseln';
-  const paint = () => { swatch.style.background = nextPaper().color; };
-  paint();
-  swatch.addEventListener('click', () => {
-    const next = nextPaper().id;
-    try { localStorage.setItem(PAPER_KEY, next); } catch (e) { /* ignore */ }
-    applyPaper(next);
-    paint();
+  /* three visible swatches — the active one is marked, one click picks
+     directly (a single cycling dot read as "current color" and confused) */
+  const picker = document.createElement('div');
+  picker.className = 'paper-picker';
+  picker.setAttribute('role', 'group');
+  picker.setAttribute('aria-label', 'Hintergrundfarbe');
+  const paint = () => {
+    [...picker.children].forEach((b, i) => {
+      const on = PAPERS[i].id === currentPaper();
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+  };
+  PAPERS.forEach((p) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'paper-dot';
+    b.style.background = p.color;
+    b.setAttribute('data-i18n-title', 'paper_' + p.id);
+    b.setAttribute('aria-label', 'Hintergrund: ' + p.id);
+    b.addEventListener('click', () => {
+      try { localStorage.setItem(PAPER_KEY, p.id); } catch (e) { /* ignore */ }
+      applyPaper(p.id);
+      paint();
+    });
+    picker.appendChild(b);
   });
-  nav.appendChild(swatch);
+  paint();
+  nav.appendChild(picker);
 
   const btn = document.createElement('button');
   btn.type = 'button';
