@@ -1,4 +1,5 @@
 import './styles/main.css';
+import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { wireCompose, val } from './js/compose.js';
@@ -20,7 +21,7 @@ initModelAmbient({
   spin: { delay: 0, speed: 25 }
 });
 
-/* booking → Instagram DM message */
+/* booking -> email to boschungservices@gmail.com */
 wireCompose({
   trigger: document.getElementById('bk-send'),
   box: document.getElementById('bk-box'),
@@ -28,13 +29,22 @@ wireCompose({
   copyBtn: document.getElementById('bk-copy'),
   noteEl: document.getElementById('bk-note'),
   build: () =>
-    "Hi Tobi! I'd like to book: " + val('bk-type') + '\n' +
+    'Hi Tobi! Ich möchte buchen: ' + val('bk-type') + '\n' +
     'Name: ' + val('bk-name') + '\n' +
     'Email: ' + val('bk-email') + '\n' +
-    'Date: ' + val('bk-date') + '\n' +
-    'Guests: ' + val('bk-guests') + '\n' +
-    'Location: ' + val('bk-where') + '\n' +
-    'Notes: ' + val('bk-msg-in')
+    'Datum: ' + val('bk-date') + '\n' +
+    'Gäste: ' + val('bk-guests') + '\n' +
+    'Ort: ' + val('bk-where') + '\n' +
+    'Bemerkungen: ' + val('bk-msg-in')
+});
+
+/* fill the mailto link whenever the message box is (re)built */
+document.getElementById('bk-send').addEventListener('click', () => {
+  const msg = document.getElementById('bk-msg').textContent;
+  const mail = document.getElementById('bk-mail');
+  mail.href = 'mailto:boschungservices@gmail.com'
+    + '?subject=' + encodeURIComponent('Anfrage ' + (val('bk-type') || 'Catering') + ' — ' + (document.getElementById('bk-name').value || ''))
+    + '&body=' + encodeURIComponent(msg);
 });
 
 /* CMS-managed package prices */

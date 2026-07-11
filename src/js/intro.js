@@ -66,23 +66,26 @@ export function runIntro(root) {
   initScrollEffects(root);
 }
 
-/* repeating letter wave (same feel as the logo entrance), rolling left→right
-   across a heading every few seconds.
+/* per-letter hover on a heading — the same feel as hovering the HYPERTOBI
+   nav logo (letter lifts and tilts, springs back).
    The textured .tt words clip their texture via background-clip:text — that
    clip breaks on transformed child spans, so each letter gets its own copy of
-   the word's background, offset to line up with its resting position. Splits
-   lazily and re-splits when i18n swaps the text. */
-export function initHeroWave(root, opts = {}) {
+   the word's background, offset to line up with its resting position (the
+   hover transform itself lives in CSS: .wave-l:hover). Splits lazily and
+   re-splits when i18n swaps the text (hyper:i18n event). */
+export function initHeroHover(root, opts = {}) {
   if (reducedMotion()) return;
   const h1 = (root || document).querySelector(opts.selector || '[data-anim="h1"]');
   if (!h1) return;
 
+  const ROTS = [-8, 6, -6, 8, -7, 7];
   function split() {
     h1.querySelectorAll('.tt').forEach((word) => {
       if (word.__waveFor === word.textContent && word.querySelector('.wave-l')) return;
       const text = word.textContent;
       const cs = getComputedStyle(word);
       word.textContent = '';
+      let i = 0;
       for (const ch of text) {
         const s = document.createElement('span');
         s.className = 'wave-l';
@@ -93,6 +96,7 @@ export function initHeroWave(root, opts = {}) {
           'background-image:' + cs.backgroundImage + ';' +
           'background-size:' + cs.backgroundSize + ';' +
           '-webkit-background-clip:text;background-clip:text';
+        s.style.setProperty('--rot', ROTS[i++ % ROTS.length] + 'deg');
         word.appendChild(s);
       }
       word.style.backgroundImage = 'none';
@@ -108,17 +112,10 @@ export function initHeroWave(root, opts = {}) {
     });
   }
 
-  function wave() {
-    if (document.hidden) return;
-    split();
-    const letters = h1.querySelectorAll('.wave-l');
-    if (!letters.length) return;
-    gsap.timeline()
-      .to(letters, { y: -12, rotation: -5, duration: 0.26, ease: 'power2.out', stagger: 0.03 })
-      .to(letters, { y: 0, rotation: 0, duration: 0.45, ease: 'back.out(2.4)', stagger: 0.03 }, 0.24);
-  }
-
-  setInterval(wave, (opts.interval || 5) * 1000);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => split());
+  else split();
+  /* i18n swaps the headline text (and may resize it) — re-split afterwards */
+  window.addEventListener('hyper:i18n', () => requestAnimationFrame(split));
 }
 
 /* progress bar + hero parallax + drift + alternating slide-ins */

@@ -1,14 +1,13 @@
 import './styles/main.css';
+import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
-import { initShatter } from './js/shatter.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { wireCompose, val } from './js/compose.js';
 import { applyFilmRun } from './js/content.js';
 
 initI18n();
 runIntro(document.querySelector('.page'));
-initShatter();
 
 /* ambient 3D: darkroom enlarger, watching the cursor (the film roll and the
    old animated cassette are still on disk if ever wanted again) */

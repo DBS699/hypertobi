@@ -1,13 +1,12 @@
 import './styles/main.css';
+import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
-import { initShatter } from './js/shatter.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { applyPortfolio } from './js/content.js';
 
 initI18n();
 runIntro(document.querySelector('.page'));
-initShatter();
 
 /* ambient 3D: the retro computer sits in the hero from page load and turns
    to follow the visitor's cursor */

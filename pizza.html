@@ -54,12 +54,20 @@
   <!-- CATERING + WORKSHOPS -->
   <main class="main">
 
-    <div class="grid-2">
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_offer_t">This is what I offer.</h2>
+      <div class="grid-2">
       <!-- Catering card -->
       <section class="card" data-anim="card" style="background:#E8402A;color:#fff;display:flex;flex-direction:column;gap:16px">
         <h2 class="h2" data-i18n="pz_cat_title">Catering</h2>
         <p data-i18n="pz_cat_body" style="font-size:14.5px;line-height:1.6;margin:0">I bring the oven, the dough and the hype — you bring the people. Fresh Neapolitan pizza, stretched and fired in front of your guests, one after the other until everyone is happy.</p>
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=70" alt="The oven in action at an event" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;display:block">
+        <div class="swipe-gal" aria-label="Impressions — swipe">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="The oven in action at an event" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Pizza in the wood-fired oven" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Stretching the dough" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Pizza on the table" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Guests enjoying pizza together" loading="lazy">
+        </div>
         <a href="#booking" data-i18n="pz_form_title" class="pill" style="align-self:flex-start;color:#E8402A;padding:10px 20px">Request a date</a>
       </section>
 
@@ -72,24 +80,55 @@
           <div class="step-row"><span class="n">2</span><span data-i18n="pz_ws_b2">Stretch, top &amp; fire your own pizza</span></div>
           <div class="step-row"><span class="n">3</span><span data-i18n="pz_ws_b3">Long table dinner together</span></div>
         </div>
-        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=70" alt="Workshop table, hands in flour" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px;display:block">
+        <div class="swipe-gal" aria-label="Workshop impressions — swipe">
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Workshop table, hands in flour" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Stretching the dough together" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="The result: fresh pizza" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Long table dinner" loading="lazy">
+        </div>
       </section>
-    </div>
-
-
-    <!-- MENU -->
-    <section data-anim="card">
-      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_menu_t">The pizzas.</h2>
-      <p class="sec-sub" data-i18n="pz_menu_sub">48-hour cold-fermented dough, San Marzano tomatoes, fior di latte — baked in 90 seconds at 450°C.</p>
-      <div class="grid-3 menu-grid">
-        <div class="card menu-card"><div class="mname">Margherita</div><p class="ming" data-i18n="pz_m1">Tomato, fior di latte, basil, olive oil</p></div>
-        <div class="card menu-card"><div class="mname">Marinara</div><p class="ming" data-i18n="pz_m2">Tomato, garlic, oregano — naturally vegan</p></div>
-        <div class="card menu-card"><div class="mname">Diavola</div><p class="ming" data-i18n="pz_m3">Spicy salami, fior di latte, chili honey</p></div>
-        <div class="card menu-card"><div class="mname">Crudo &amp; Rucola</div><p class="ming" data-i18n="pz_m4">Prosciutto crudo, rocket, parmesan shavings</p></div>
-        <div class="card menu-card"><div class="mname">Quattro Formaggi</div><p class="ming" data-i18n="pz_m5">Four cheeses, a touch of honey</p></div>
-        <div class="card menu-card"><div class="mname">Stagionale</div><p class="ming" data-i18n="pz_m6">The monthly special — whatever the season gives</p></div>
       </div>
-      <p class="menu-note" data-i18n="pz_menu_note">🌱 Vegetarian is always on the menu — vegan mozzarella &amp; gluten-free dough on pre-order.</p>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_how_t">How it works.</h2>
+      <div class="grid-4 how-grid">
+        <div class="card how-card"><span class="hn">1</span><div class="ht" data-i18n="pz_how1_t">Request your date</div><p data-i18n="pz_how1_b">Form below — you hear back within 48 h with a fixed quote.</p></div>
+        <div class="card how-card"><span class="hn">2</span><div class="ht" data-i18n="pz_how2_t">I arrive ~1 h early</div><p data-i18n="pz_how2_b">Oven setup: all I need is a flat spot of about 3×2 m and a sturdy table.</p></div>
+        <div class="card how-card"><span class="hn">3</span><div class="ht" data-i18n="pz_how3_t">1.5–2 h live baking</div><p data-i18n="pz_how3_b">Pizzas fly out nonstop — stretched, topped and fired in front of your guests.</p></div>
+        <div class="card how-card"><span class="hn">4</span><div class="ht" data-i18n="pz_how4_t">30 min teardown</div><p data-i18n="pz_how4_b">I pack up and leave the place as clean as I found it.</p></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.7fr 1.3fr;gap:36px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px;position:sticky;top:96px">
+        <h2 data-i18n="pz_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Request a date</h2>
+        <p data-i18n="pz_note" style="font-size:13.5px;line-height:1.6;color:#6B6157;margin:0">No booking system, no spam — this writes an email you send me with one click.</p>
+      </div>
+      <div>
+        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text"></label>
+          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email"></label>
+          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date"></label>
+          <label class="field"><span data-i18n="pz_l_guests">Guests</span><input id="bk-guests" type="number" min="1"></label>
+          <label class="field"><span data-i18n="pz_l_where">Location</span><input id="bk-where" type="text"></label>
+          <label class="field"><span data-i18n="pz_l_type">What do you need?</span><select id="bk-type"><option data-i18n="pz_t_cat" value="Catering">Catering</option><option data-i18n="pz_t_ws" value="Workshop / Teambuilding">Workshop / Teambuilding</option></select></label>
+          <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="bk-msg-in" rows="3" data-i18n-ph="pz_ph_msg" placeholder="Special requests? (vegetarian, gluten-free…)"></textarea></label>
+        </div>
+        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#E8402A;color:#fff">Compose my request</button>
+
+        <div id="bk-box" class="compose-box" hidden style="margin-top:20px">
+          <pre id="bk-msg"></pre>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a id="bk-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#E8402A;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
+            <button id="bk-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
+            <span id="bk-note" class="copied-note"></span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- PACKAGES -->
@@ -136,17 +175,6 @@
       <p class="menu-note" data-i18n="pz_pk_note">Travel within 60 km of Bern included — further by arrangement. Kids under 6 eat free.</p>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section data-anim="card">
-      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_how_t">How it works.</h2>
-      <div class="grid-4 how-grid">
-        <div class="card how-card"><span class="hn">1</span><div class="ht" data-i18n="pz_how1_t">Request your date</div><p data-i18n="pz_how1_b">Form below — you hear back within 48 h with a fixed quote.</p></div>
-        <div class="card how-card"><span class="hn">2</span><div class="ht" data-i18n="pz_how2_t">I arrive ~1 h early</div><p data-i18n="pz_how2_b">Oven setup: all I need is a flat spot of about 3×2 m and a sturdy table.</p></div>
-        <div class="card how-card"><span class="hn">3</span><div class="ht" data-i18n="pz_how3_t">1.5–2 h live baking</div><p data-i18n="pz_how3_b">Pizzas fly out nonstop — stretched, topped and fired in front of your guests.</p></div>
-        <div class="card how-card"><span class="hn">4</span><div class="ht" data-i18n="pz_how4_t">30 min teardown</div><p data-i18n="pz_how4_b">I pack up and leave the place as clean as I found it.</p></div>
-      </div>
-    </section>
-
     <!-- GOOD TO KNOW -->
     <section data-anim="card">
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_faq_t">Good to know.</h2>
@@ -159,47 +187,6 @@
         <details><summary data-i18n="pz_f6_q">Deposit &amp; cancellation?</summary><p class="a" data-i18n="pz_f6_a">Your date is fixed with a 20% deposit. Free cancellation up to 14 days before the event — after that we simply find a new date.</p></details>
       </div>
     </section>
-
-    <!-- QUOTES -->
-    <section data-anim="card">
-      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_ts_t">People keep talking about the pizza.</h2>
-      <div class="grid-3 quote-grid">
-        <div class="card quote-card"><p class="q" data-i18n="pz_ts1_q">“The pizza was the highlight of our wedding — guests still bring it up a year later.”</p><span class="who" data-i18n="pz_ts1_w">Nina &amp; Marc · wedding in Thun</span></div>
-        <div class="card quote-card"><p class="q" data-i18n="pz_ts2_q">“Team event of the year. Everyone with their hands in the flour, zero phones out.”</p><span class="who" data-i18n="pz_ts2_w">Corina · HR team workshop, Bern</span></div>
-        <div class="card quote-card"><p class="q" data-i18n="pz_ts3_q">“450 degrees, zero stress. Tobi set up, fed forty people and vanished like a pizza ninja.”</p><span class="who" data-i18n="pz_ts3_w">Luca · 40th birthday, Fribourg</span></div>
-      </div>
-    </section>
-
-    <!-- BOOKING -->
-    <section id="booking" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.7fr 1.3fr;gap:36px;align-items:start">
-      <div style="display:flex;flex-direction:column;gap:14px;position:sticky;top:96px">
-        <h2 data-i18n="pz_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Request a date</h2>
-        <p data-i18n="pz_note" style="font-size:13.5px;line-height:1.6;color:#6B6157;margin:0">No booking system, no spam — this writes a message you send me directly on Instagram.</p>
-        <a data-i18n="pz_dm" class="pill" style="align-self:flex-start;font-size:13px" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Open Instagram → @hypertobi</a>
-      </div>
-      <div>
-        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text"></label>
-          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email"></label>
-          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date"></label>
-          <label class="field"><span data-i18n="pz_l_guests">Guests</span><input id="bk-guests" type="number" min="1"></label>
-          <label class="field"><span data-i18n="pz_l_where">Location</span><input id="bk-where" type="text"></label>
-          <label class="field"><span data-i18n="pz_l_type">What do you need?</span><select id="bk-type"><option data-i18n="pz_t_cat" value="Catering">Catering</option><option data-i18n="pz_t_ws" value="Workshop / Teambuilding">Workshop / Teambuilding</option></select></label>
-          <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="bk-msg-in" rows="3" data-i18n-ph="pz_ph_msg" placeholder="Special requests? (vegetarian, gluten-free…)"></textarea></label>
-        </div>
-        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#E8402A;color:#fff">Compose my request</button>
-
-        <div id="bk-box" class="compose-box" hidden style="margin-top:20px">
-          <pre id="bk-msg"></pre>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <button id="bk-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
-            <a data-i18n="pz_dm" class="pill" style="font-size:13px;background:#201A17;color:#FAF4E8;--sh:#9a8f83" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Open Instagram → @hypertobi</a>
-            <span id="bk-note" class="copied-note"></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
   </main>
 

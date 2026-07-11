@@ -50,65 +50,79 @@
       <div class="gallery-cols">
         <div class="foto-frame" data-anim="card" style="--tilt:-0.6deg">
           <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&h=1200&q=70" alt="Photo № 01" loading="lazy">
-          <div class="foto-meta"><span>№ 01 · 35mm</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 01 · 35mm</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
         <div class="foto-frame" data-anim="card" style="--tilt:0.5deg">
           <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=900&q=70" alt="Photo № 02" loading="lazy">
-          <div class="foto-meta"><span>№ 02 · 35mm</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 02 · 35mm</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
         <div class="foto-frame" data-anim="card" style="--tilt:-0.4deg">
           <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=70" alt="Photo № 03" loading="lazy">
-          <div class="foto-meta"><span>№ 03 · 120</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 03 · 120</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
         <div class="foto-frame" data-anim="card" style="--tilt:0.7deg">
           <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&h=1300&q=70" alt="Photo № 04" loading="lazy">
-          <div class="foto-meta"><span>№ 04 · 35mm</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 04 · 35mm</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
         <div class="foto-frame" data-anim="card" style="--tilt:-0.5deg">
           <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=70" alt="Photo № 05" loading="lazy">
-          <div class="foto-meta"><span>№ 05 · 120</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 05 · 120</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
         <div class="foto-frame" data-anim="card" style="--tilt:0.4deg">
           <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&h=900&q=70" alt="Photo № 06" loading="lazy">
-          <div class="foto-meta"><span>№ 06 · 35mm</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 06 · 35mm</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
         <div class="foto-frame" data-anim="card" style="--tilt:-0.7deg">
           <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=70" alt="Photo № 07" loading="lazy">
-          <div class="foto-meta"><span>№ 07 · 35mm</span><a href="#prints" data-i18n="ft_order" class="order-chip">Order print</a></div>
+          <div class="foto-meta"><span>№ 07 · 35mm</span><button type="button" data-i18n="ft_order" class="order-chip">+ Select</button></div>
         </div>
       </div>
     </div>
 
     <!-- PRINTS -->
-    <section id="prints" class="card booking-grid" data-anim="card" data-shatter style="background:#E17BA4;color:#201A17;padding:32px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:36px;align-items:start">
+    <section id="prints" class="card booking-grid" data-anim="card" style="background:#E17BA4;color:#201A17;padding:32px;display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:14px">
         <h2 data-i18n="ft_print_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Buy a print</h2>
         <p data-i18n="ft_print_body" style="font-size:14px;line-height:1.6;margin:0">Every photo in the gallery is available as a lab-quality print — numbered, packed flat, shipped within Switzerland. Tell me which one and how big.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span style="font-size:12px;font-weight:700;border:2px solid #201A17;border-radius:999px;padding:5px 12px;background:#fff">A4</span>
-          <span style="font-size:12px;font-weight:700;border:2px solid #201A17;border-radius:999px;padding:5px 12px;background:#fff">A3</span>
-          <span style="font-size:12px;font-weight:700;border:2px solid #201A17;border-radius:999px;padding:5px 12px;background:#fff">A2</span>
+        <!-- sample living room: the active print hangs above the sofa, to scale -->
+        <div class="room" aria-hidden="true">
+          <div class="room-floor"></div>
+          <div class="room-sofa">
+            <div class="sofa-back"></div>
+            <div class="sofa-arm sofa-arm--l"></div>
+            <div class="sofa-arm sofa-arm--r"></div>
+            <div class="sofa-seat"></div>
+            <div class="sofa-leg sofa-leg--l"></div>
+            <div class="sofa-leg sofa-leg--r"></div>
+          </div>
+          <span class="room-plant">🪴</span>
+          <div id="rp-frame" class="print-on-wall" hidden><img id="rp-img" alt="Print preview"></div>
+          <span id="rp-size" class="rp-size-tag" hidden>A4</span>
         </div>
-        <p data-i18n="ft_print_note" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.75">Prices depend on size &amp; paper — I'll confirm in the DM.</p>
+        <p data-i18n="ft_preview_hint" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.8">Sample living room — the print is shown to scale above the sofa.</p>
+        <p data-i18n="ft_print_note" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.75">Prices depend on size &amp; paper — I'll confirm by email.</p>
       </div>
       <div style="background:#fff;border:2px solid #201A17;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px">
-        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
-          <label class="field"><span data-i18n="ft_l_photo">Photo №</span><select id="pr-photo"><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option></select></label>
-          <label class="field"><span data-i18n="ft_l_size">Size</span><select id="pr-size"><option>A4</option><option>A3</option><option>A2</option></select></label>
-          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="pr-name" type="text"></label>
-        </div>
+        <div data-i18n="ft_cart_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px">Your selection</div>
+        <div id="cart-list" class="cart-list"></div>
+        <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="pr-name" type="text"></label>
         <button id="pr-send" data-i18n="ft_compose" class="pill" style="align-self:flex-start;background:#201A17;color:#FAF4E8;--sh:#9a8f83;padding:11px 22px">Compose order</button>
         <div id="pr-box" class="compose-box" hidden>
           <pre id="pr-msg"></pre>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <a id="pr-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;padding:8px 16px;background:#E17BA4" href="#">Send email → boschungservices@gmail.com</a>
             <button id="pr-copy" data-i18n="pz_copy" class="pill" style="font-size:13px;padding:8px 16px">Copy message</button>
-            <a data-i18n="pz_dm" class="pill" style="font-size:13px;padding:8px 16px;background:#E17BA4" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Open Instagram → @hypertobi</a>
             <span id="pr-note" class="copied-note"></span>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- floating cart shortcut -->
+  <div id="cart-bar" hidden>
+    <a href="#prints" class="pill" style="background:#E17BA4;font-size:14px;padding:11px 20px">🖼 <span id="cart-count">0</span> · <span data-i18n="ft_cart_go">To the order</span></a>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">

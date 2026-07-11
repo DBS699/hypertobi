@@ -33,6 +33,7 @@ const D = {
   /* ===== pizza page ===== */
   pz_h1a: { en: "Neapolitan pizza,", de: "Neapolitanische Pizza,", fr: "Pizza napolitaine,", it: "Pizza napoletana," },
   pz_h1b: { en: "wherever you party.", de: "wo auch immer du feierst.", fr: "où que tu fasses la fête.", it: "ovunque tu faccia festa." },
+  pz_offer_t: { en: "This is what I offer.", de: "Das biete ich an.", fr: "Voici ce que je propose.", it: "Questo è ciò che offro." },
   pz_sub: { en: "Catering for weddings, offices & birthdays — or roll up your sleeves in a workshop and learn it yourself.", de: "Catering für Hochzeiten, Firmen & Geburtstage — oder kremple die Ärmel hoch und lern es im Workshop selbst.", fr: "Traiteur pour mariages, entreprises & anniversaires — ou retrousse tes manches et apprends-le toi-même en atelier.", it: "Catering per matrimoni, aziende & compleanni — oppure rimboccati le maniche e imparalo tu stesso in un workshop." },
   pz_chip1: { en: "Wood-fired · 450°C", de: "Holzofen · 450°C", fr: "Feu de bois · 450°C", it: "Forno a legna · 450°C" },
   pz_chip2: { en: "10–150 guests", de: "10–150 Gäste", fr: "10–150 invités", it: "10–150 ospiti" },
@@ -56,7 +57,7 @@ const D = {
   pz_l_msg: { en: "Message", de: "Nachricht", fr: "Message", it: "Messaggio" },
   pz_ph_msg: { en: "Special requests? (vegetarian, gluten-free…)", de: "Spezielle Wünsche? (vegetarisch, glutenfrei…)", fr: "Demandes spéciales ? (végétarien, sans gluten…)", it: "Richieste speciali? (vegetariano, senza glutine…)" },
   pz_send: { en: "Compose my request", de: "Anfrage erstellen", fr: "Créer ma demande", it: "Crea la richiesta" },
-  pz_note: { en: "No booking system, no spam — this writes a message you send me directly on Instagram.", de: "Kein Buchungssystem, kein Spam — das erstellt eine Nachricht, die du mir direkt auf Instagram schickst.", fr: "Pas de système de réservation, pas de spam — ça rédige un message que tu m'envoies directement sur Instagram.", it: "Nessun sistema di prenotazione, niente spam — crea un messaggio che mi mandi direttamente su Instagram." },
+  pz_note: { en: "No booking system, no spam — this writes an email you send me with one click.", de: "Kein Buchungssystem, kein Spam — das erstellt eine E-Mail, die du mir mit einem Klick schickst.", fr: "Pas de système de réservation, pas de spam — ça rédige un e-mail que tu m'envoies en un clic.", it: "Nessun sistema di prenotazione, niente spam — crea un'e-mail che mi mandi con un clic." },
   pz_copy: { en: "Copy message", de: "Nachricht kopieren", fr: "Copier le message", it: "Copia messaggio" },
   pz_dm: { en: "Open Instagram → @hypertobi", de: "Instagram öffnen → @hypertobi", fr: "Ouvrir Instagram → @hypertobi", it: "Apri Instagram → @hypertobi" },
   pz_arcade_t: { en: "Cook the perfect pizza, win a real one.", de: "Koch die perfekte Pizza, gewinn eine echte.", fr: "Cuisine la pizza parfaite, gagnes-en une vraie.", it: "Cucina la pizza perfetta, vincine una vera." },
@@ -95,15 +96,6 @@ const D = {
   fld_send: { en: "Compose my sign-up", de: "Anmeldung erstellen", fr: "Créer mon inscription", it: "Crea l'iscrizione" },
 
   /* ===== pizza: menu / packages / how / faq / quotes ===== */
-  pz_menu_t: { en: "The pizzas.", de: "Die Pizzas.", fr: "Les pizzas.", it: "Le pizze." },
-  pz_menu_sub: { en: "48-hour cold-fermented dough, San Marzano tomatoes, fior di latte — baked in 90 seconds at 450°C.", de: "48 Stunden kalt gereifter Teig, San-Marzano-Tomaten, Fior di Latte — in 90 Sekunden bei 450°C gebacken.", fr: "Pâte maturée 48 h à froid, tomates San Marzano, fior di latte — cuite en 90 secondes à 450°C.", it: "Impasto maturato 48 ore a freddo, pomodori San Marzano, fior di latte — cotta in 90 secondi a 450°C." },
-  pz_m1: { en: "Tomato, fior di latte, basil, olive oil", de: "Tomate, Fior di Latte, Basilikum, Olivenöl", fr: "Tomate, fior di latte, basilic, huile d'olive", it: "Pomodoro, fior di latte, basilico, olio d'oliva" },
-  pz_m2: { en: "Tomato, garlic, oregano — naturally vegan", de: "Tomate, Knoblauch, Oregano — von Natur aus vegan", fr: "Tomate, ail, origan — naturellement végane", it: "Pomodoro, aglio, origano — naturalmente vegana" },
-  pz_m3: { en: "Spicy salami, fior di latte, chili honey", de: "Scharfe Salami, Fior di Latte, Chili-Honig", fr: "Salami piquant, fior di latte, miel au piment", it: "Salame piccante, fior di latte, miele al peperoncino" },
-  pz_m4: { en: "Prosciutto crudo, rocket, parmesan shavings", de: "Prosciutto crudo, Rucola, Parmesanspäne", fr: "Prosciutto crudo, roquette, copeaux de parmesan", it: "Prosciutto crudo, rucola, scaglie di parmigiano" },
-  pz_m5: { en: "Four cheeses, a touch of honey", de: "Vier Käse, ein Hauch Honig", fr: "Quatre fromages, une touche de miel", it: "Quattro formaggi, un tocco di miele" },
-  pz_m6: { en: "The monthly special — whatever the season gives", de: "Der Monats-Special — was die Saison hergibt", fr: "La spéciale du mois — au gré des saisons", it: "La speciale del mese — quello che offre la stagione" },
-  pz_menu_note: { en: "🌱 Vegetarian is always on the menu — vegan mozzarella & gluten-free dough on pre-order.", de: "🌱 Vegetarisch ist immer dabei — veganer Mozzarella & glutenfreier Teig auf Vorbestellung.", fr: "🌱 Végétarien toujours au menu — mozzarella végane & pâte sans gluten sur précommande.", it: "🌱 Vegetariano sempre nel menù — mozzarella vegana & impasto senza glutine su prenotazione." },
   pz_pk_t: { en: "Packages & prices.", de: "Pakete & Preise.", fr: "Formules & prix.", it: "Pacchetti & prezzi." },
   pz_pk_sub: { en: "Flat and fair — you get a fixed quote after your request, no surprises on the day.", de: "Pauschal und fair — nach deiner Anfrage gibts eine Fixofferte, keine Überraschungen am Tag selbst.", fr: "Forfaitaire et fair-play — devis fixe après ta demande, zéro surprise le jour J.", it: "Forfettario e onesto — dopo la richiesta ricevi un preventivo fisso, nessuna sorpresa." },
   pz_pp: { en: "/ person", de: "/ Person", fr: "/ pers.", it: "/ persona" },
@@ -148,13 +140,6 @@ const D = {
   pz_f5_a: { en: "I am based in Bern. Up to 60 km travel is included in every package, further afield is possible by arrangement.", de: "Ich bin in Bern stationiert. Bis 60 km Anfahrt ist in jedem Paket inklusive, weiter weg geht nach Absprache.", fr: "Je suis basé à Berne. Jusqu'à 60 km, le déplacement est inclus dans chaque formule, plus loin sur demande.", it: "Sono di base a Berna. Fino a 60 km la trasferta è inclusa in ogni pacchetto, più lontano su richiesta." },
   pz_f6_q: { en: "Deposit & cancellation?", de: "Anzahlung & Stornierung?", fr: "Acompte & annulation ?", it: "Acconto & cancellazione?" },
   pz_f6_a: { en: "Your date is fixed with a 20% deposit. Free cancellation up to 14 days before the event — after that we simply find a new date.", de: "Dein Datum ist mit 20% Anzahlung fix. Kostenlose Stornierung bis 14 Tage vor dem Event — danach finden wir einfach ein neues Datum.", fr: "Ta date est bloquée avec un acompte de 20%. Annulation gratuite jusqu'à 14 jours avant l'événement — après, on trouve simplement une nouvelle date.", it: "La tua data è fissata con un acconto del 20%. Cancellazione gratuita fino a 14 giorni prima dell'evento — dopo, troviamo semplicemente una nuova data." },
-  pz_ts_t: { en: "People keep talking about the pizza.", de: "Die Leute reden immer noch von der Pizza.", fr: "On parle encore de la pizza.", it: "La gente parla ancora della pizza." },
-  pz_ts1_q: { en: "“The pizza was the highlight of our wedding — guests still bring it up a year later.”", de: "«Die Pizza war das Highlight unserer Hochzeit — die Gäste reden ein Jahr später noch davon.»", fr: "« La pizza était le clou de notre mariage — les invités en parlent encore un an après. »", it: "«La pizza è stata il momento clou del nostro matrimonio — gli ospiti ne parlano ancora un anno dopo.»" },
-  pz_ts1_w: { en: "Nina & Marc · wedding in Thun", de: "Nina & Marc · Hochzeit in Thun", fr: "Nina & Marc · mariage à Thoune", it: "Nina & Marc · matrimonio a Thun" },
-  pz_ts2_q: { en: "“Team event of the year. Everyone with their hands in the flour, zero phones out.”", de: "«Teamevent des Jahres. Alle mit den Händen im Mehl, kein einziges Handy draussen.»", fr: "« Le team event de l'année. Tout le monde les mains dans la farine, zéro téléphone sorti. »", it: "«Il team event dell'anno. Tutti con le mani nella farina, zero telefoni in giro.»" },
-  pz_ts2_w: { en: "Corina · HR team workshop, Bern", de: "Corina · HR-Team-Workshop, Bern", fr: "Corina · atelier d'équipe RH, Berne", it: "Corina · workshop del team HR, Berna" },
-  pz_ts3_q: { en: "“450 degrees, zero stress. Tobi set up, fed forty people and vanished like a pizza ninja.”", de: "«450 Grad, null Stress. Tobi hat aufgebaut, vierzig Leute verpflegt und ist wie ein Pizza-Ninja verschwunden.»", fr: "« 450 degrés, zéro stress. Tobi a tout installé, nourri quarante personnes et disparu comme un ninja de la pizza. »", it: "«450 gradi, zero stress. Tobi ha montato tutto, sfamato quaranta persone ed è sparito come un ninja della pizza.»" },
-  pz_ts3_w: { en: "Luca · 40th birthday, Fribourg", de: "Luca · 40. Geburtstag, Freiburg", fr: "Luca · 40e anniversaire, Fribourg", it: "Luca · 40° compleanno, Friburgo" },
 
   pz_arcade_full: { en: "FULLSCREEN ▸", de: "VOLLBILD ▸", fr: "PLEIN ÉCRAN ▸", it: "SCHERMO INTERO ▸" },
   pz_arcade_b: { en: "PLAY THE 8-BIT PIZZA LAB", de: "SPIEL DAS 8-BIT PIZZA LAB", fr: "JOUE AU 8-BIT PIZZA LAB", it: "GIOCA AL 8-BIT PIZZA LAB" },
@@ -181,10 +166,15 @@ const D = {
   ft_h1: { en: "Analog work.", de: "Analoge Arbeiten.", fr: "Travail argentique.", it: "Lavori analogici." },
   ft_h1b: { en: "On paper, if you want.", de: "Auf Papier, wenn du willst.", fr: "Sur papier, si tu veux.", it: "Su carta, se vuoi." },
   ft_prints_pill: { en: "Prints available ↓", de: "Prints erhältlich ↓", fr: "Tirages disponibles ↓", it: "Stampe disponibili ↓" },
-  ft_order: { en: "Order print", de: "Print bestellen", fr: "Commander", it: "Ordina stampa" },
+  ft_order: { en: "+ Select", de: "+ Auswählen", fr: "+ Sélectionner", it: "+ Seleziona" },
+  ft_selected: { en: "✓ Selected", de: "✓ Ausgewählt", fr: "✓ Sélectionné", it: "✓ Selezionato" },
+  ft_cart_title: { en: "Your selection", de: "Deine Auswahl", fr: "Ta sélection", it: "La tua selezione" },
+  ft_cart_empty: { en: "Tap photos in the gallery above to select them.", de: "Tippe oben in der Galerie auf Fotos, um sie auszuwählen.", fr: "Touche les photos dans la galerie pour les sélectionner.", it: "Tocca le foto nella galleria per selezionarle." },
+  ft_cart_go: { en: "To the order", de: "Zur Bestellung", fr: "Vers la commande", it: "All'ordine" },
+  ft_preview_hint: { en: "Sample living room — the print is shown to scale above the sofa.", de: "Beispiel-Wohnzimmer — der Print ist massstäblich über dem Sofa.", fr: "Salon d'exemple — le tirage est à l'échelle au-dessus du canapé.", it: "Soggiorno di esempio — la stampa è in scala sopra il divano." },
   ft_print_title: { en: "Buy a print", de: "Print kaufen", fr: "Acheter un tirage", it: "Compra una stampa" },
   ft_print_body: { en: "Every photo in the gallery is available as a lab-quality print — numbered, packed flat, shipped within Switzerland. Tell me which one and how big.", de: "Jedes Foto der Galerie gibt's als Print in Labor-Qualität — nummeriert, flach verpackt, Versand innerhalb der Schweiz. Sag mir welches und wie gross.", fr: "Chaque photo de la galerie existe en tirage qualité labo — numéroté, emballé à plat, expédié en Suisse. Dis-moi laquelle et en quelle taille.", it: "Ogni foto della galleria è disponibile come stampa di qualità da laboratorio — numerata, imballata piatta, spedita in Svizzera. Dimmi quale e quanto grande." },
-  ft_print_note: { en: "Prices depend on size & paper — I'll confirm in the DM.", de: "Preise hängen von Grösse & Papier ab — ich bestätige im DM.", fr: "Les prix dépendent de la taille & du papier — je confirme en DM.", it: "I prezzi dipendono da formato & carta — confermo in DM." },
+  ft_print_note: { en: "Prices depend on size & paper — I'll confirm by email.", de: "Preise hängen von Grösse & Papier ab — ich bestätige per E-Mail.", fr: "Les prix dépendent de la taille & du papier — je confirme par e-mail.", it: "I prezzi dipendono da formato & carta — confermo via e-mail." },
   ft_l_photo: { en: "Photo №", de: "Foto №", fr: "Photo №", it: "Foto №" },
   ft_l_size: { en: "Size", de: "Grösse", fr: "Taille", it: "Formato" },
   ft_compose: { en: "Compose order", de: "Bestellung erstellen", fr: "Créer la commande", it: "Crea l'ordine" },
@@ -210,7 +200,7 @@ const D = {
 const KEY = 'hypertobi_lang';
 
 export function current() {
-  try { return localStorage.getItem(KEY) || 'en'; } catch (e) { return 'en'; }
+  try { return localStorage.getItem(KEY) || 'de'; } catch (e) { return 'de'; }
 }
 
 export function apply(lang) {
@@ -234,11 +224,12 @@ export function apply(lang) {
   });
   document.documentElement.lang = lang;
   fitHeroH1();
+  window.dispatchEvent(new CustomEvent('hyper:i18n', { detail: { lang } }));
 }
 
 /* keep each hero headline span on ONE line: the spans never wrap
    (white-space: nowrap in CSS) — instead the whole h1 shrinks until the
-   longest line fits. German lines are much longer than English ones. */
+   longest line fits, so every language lies like the English original. */
 export function fitHeroH1() {
   const h1 = document.querySelector('.hero h1');
   if (!h1) return;
