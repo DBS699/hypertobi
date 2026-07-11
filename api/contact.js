@@ -43,7 +43,9 @@ export default async function handler(req, res) {
     text: String(message),
   });
   if (!inquiry.ok) {
-    return res.status(502).json({ error: 'send failed' });
+    const detail = await inquiry.text().catch(() => '');
+    console.error('resend error', inquiry.status, detail);
+    return res.status(502).json({ error: 'send failed', detail: detail.slice(0, 300) });
   }
 
   /* 2) confirmation copy to the customer — only with a verified sender */

@@ -5,7 +5,6 @@ const D = {
   nav_film: { en: "Film Lab", de: "Film-Labor", fr: "Labo Photo", it: "Laboratorio" },
   nav_foto: { en: "Photos", de: "Fotos", fr: "Photos", it: "Foto" },
   nav_web: { en: "Websites", de: "Websites", fr: "Sites web", it: "Siti web" },
-  nav_arcade: { en: "Arcade", de: "Arcade", fr: "Arcade", it: "Arcade" },
   footer_hi: { en: "Say hi → @hypertobi", de: "Sag hallo → @hypertobi", fr: "Dis bonjour → @hypertobi", it: "Saluta → @hypertobi" },
   footer_made: { en: "Handmade website — yes, I build these too.", de: "Handgemachte Website — ja, sowas baue ich auch.", fr: "Site fait main — oui, j'en fais aussi.", it: "Sito fatto a mano — sì, faccio anche questi." },
   footer_legal: { en: "© 2026 Boschung Services · sole proprietorship of Tobias Boschung", de: "© 2026 Boschung Services · Einzelunternehmen von Tobias Boschung", fr: "© 2026 Boschung Services · entreprise individuelle de Tobias Boschung", it: "© 2026 Boschung Services · ditta individuale di Tobias Boschung" },
@@ -71,7 +70,6 @@ const D = {
   pz_note: { en: "No booking system, no spam — this writes an email you send me with one click.", de: "Kein Buchungssystem, kein Spam — das erstellt eine E-Mail, die du mir mit einem Klick schickst.", fr: "Pas de système de réservation, pas de spam — ça rédige un e-mail que tu m'envoies en un clic.", it: "Nessun sistema di prenotazione, niente spam — crea un'e-mail che mi mandi con un clic." },
   pz_copy: { en: "Copy message", de: "Nachricht kopieren", fr: "Copier le message", it: "Copia messaggio" },
   pz_dm: { en: "Open Instagram → @hypertobi", de: "Instagram öffnen → @hypertobi", fr: "Ouvrir Instagram → @hypertobi", it: "Apri Instagram → @hypertobi" },
-  pz_arcade_t: { en: "Cook the perfect pizza, win a real one.", de: "Koch die perfekte Pizza, gewinn eine echte.", fr: "Cuisine la pizza parfaite, gagnes-en une vraie.", it: "Cucina la pizza perfetta, vincine una vera." },
 
   wb_pf_t: { en: "Live from the portfolio.", de: "Live aus dem Portfolio.", fr: "En direct du portfolio.", it: "Dal portfolio, dal vivo." },
   wb_pf_sub: { en: "These are real client sites, loading live right here — click one to visit it.", de: "Das sind echte Kunden-Websites, die hier live laden — klick drauf, um sie zu besuchen.", fr: "De vrais sites clients, chargés en direct ici — clique pour les visiter.", it: "Siti reali di clienti, caricati dal vivo qui — clicca per visitarli." },
@@ -151,9 +149,6 @@ const D = {
   pz_f5_a: { en: "I am based in Bern. Up to 60 km travel is included in every package, further afield is possible by arrangement.", de: "Ich bin in Bern stationiert. Bis 60 km Anfahrt ist in jedem Paket inklusive, weiter weg geht nach Absprache.", fr: "Je suis basé à Berne. Jusqu'à 60 km, le déplacement est inclus dans chaque formule, plus loin sur demande.", it: "Sono di base a Berna. Fino a 60 km la trasferta è inclusa in ogni pacchetto, più lontano su richiesta." },
   pz_f6_q: { en: "Deposit & cancellation?", de: "Anzahlung & Stornierung?", fr: "Acompte & annulation ?", it: "Acconto & cancellazione?" },
   pz_f6_a: { en: "Your date is fixed with a 20% deposit. Free cancellation up to 14 days before the event — after that we simply find a new date.", de: "Dein Datum ist mit 20% Anzahlung fix. Kostenlose Stornierung bis 14 Tage vor dem Event — danach finden wir einfach ein neues Datum.", fr: "Ta date est bloquée avec un acompte de 20%. Annulation gratuite jusqu'à 14 jours avant l'événement — après, on trouve simplement une nouvelle date.", it: "La tua data è fissata con un acconto del 20%. Cancellazione gratuita fino a 14 giorni prima dell'evento — dopo, troviamo semplicemente una nuova data." },
-
-  pz_arcade_full: { en: "FULLSCREEN ▸", de: "VOLLBILD ▸", fr: "PLEIN ÉCRAN ▸", it: "SCHERMO INTERO ▸" },
-  pz_arcade_b: { en: "PLAY THE 8-BIT PIZZA LAB", de: "SPIEL DAS 8-BIT PIZZA LAB", fr: "JOUE AU 8-BIT PIZZA LAB", it: "GIOCA AL 8-BIT PIZZA LAB" },
 
   /* ===== film page ===== */
   fl_h1a: { en: "Your film,", de: "Dein Film,", fr: "Ton film,", it: "La tua pellicola," },

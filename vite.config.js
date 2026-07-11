@@ -19,7 +19,6 @@ export default defineConfig({
         film: r('film.html'),
         foto: r('foto.html'),
         web: r('web.html'),
-        arcade: r('arcade.html'),
         impressum: r('impressum.html'),
         datenschutz: r('datenschutz.html')
       }
