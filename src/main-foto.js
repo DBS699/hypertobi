@@ -40,6 +40,7 @@ setTimeout(takeTheShot, 1600);
 /* ---- Apple-Photos-style print selection: tap to select, cart with size
    per photo, live to-scale preview in the sample living room ---- */
 const SIZES = ['A4', 'A3', 'A2'];
+const PRICES = { A4: 39, A3: 59, A2: 89 };   /* CHF, incl. CH shipping */
 const SIZE_CM = { A4: [21, 29.7], A3: [29.7, 42], A2: [42, 59.4] };  /* short × long edge */
 /* the sofa is ~1.8 m wide and spans 56% of the room → 1% of room ≈ 3.2 cm */
 const CM_PER_PERCENT = 3.2;
@@ -115,6 +116,9 @@ function renderCart() {
       });
       sizes.appendChild(b);
     });
+    const price = document.createElement('span');
+    price.className = 'cprice';
+    price.textContent = 'CHF ' + PRICES[size];
     const x = document.createElement('button');
     x.type = 'button';
     x.className = 'cart-x';
@@ -127,12 +131,16 @@ function renderCart() {
       refresh();
     });
     row.addEventListener('click', () => { activeNum = num; renderCart(); updatePreview(); });
-    row.append(img, cn, sizes, x);
+    row.append(img, cn, sizes, price, x);
     list.appendChild(row);
   });
   const bar = document.getElementById('cart-bar');
   bar.hidden = !cart.size;
   document.getElementById('cart-count').textContent = cart.size;
+  const totalEl = document.getElementById('cart-total');
+  totalEl.hidden = !cart.size;
+  document.getElementById('cart-total-num').textContent =
+    [...cart.values()].reduce((sum, s) => sum + PRICES[s], 0);
 }
 
 /* hang the active print above the sofa, scaled true to size */
@@ -190,8 +198,10 @@ wireCompose({
   watch: document.getElementById('prints'),
   build: () => {
     if (!cart.size) return t('ft_cart_empty');
+    const total = [...cart.values()].reduce((sum, s) => sum + PRICES[s], 0);
     return 'Hi Tobi! Ich möchte Prints bestellen.\n' +
-      [...cart.entries()].map(([n, s]) => '– Foto № ' + n + ' — ' + s).join('\n') +
+      [...cart.entries()].map(([n, s]) => '– Foto № ' + n + ' — ' + s + ' (CHF ' + PRICES[s] + ')').join('\n') +
+      '\nTotal: CHF ' + total + ' inkl. Versand' +
       '\nName: ' + val('pr-name') +
       '\nE-Mail: ' + val('pr-email');
   }

@@ -309,6 +309,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
   background: #fff; cursor: pointer;
 }
 .size-btn.on { background: var(--ink); color: #fff; }
+.cprice { font-family: var(--display); font-weight: 800; font-size: 13px; flex: none; }
 .cart-x { border: none; background: none; font-size: 17px; font-weight: 800; cursor: pointer; color: var(--muted); padding: 2px 4px; line-height: 1; }
 #cart-bar { position: fixed; right: 20px; bottom: 20px; z-index: 400; }
 
