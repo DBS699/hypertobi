@@ -50,7 +50,15 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .nav {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 18px 40px;
-  position: sticky; top: 0; background: var(--paper); z-index: 50;
+  position: sticky; top: 0; background: var(--paper); z-index: 250;
+}
+/* the nav now sits above the global crumple overlay (z 200) and the photo
+   tiles (z 201) so nothing slides over it while scrolling — it carries its
+   own copy of the crumple texture to keep the paper look */
+.nav::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: url('/textures/crumple.png'); background-size: 760px;
+  mix-blend-mode: overlay; opacity: 0.32;
 }
 /* separator: a four-color ribbon (one segment per counter) instead of the old ink line */
 .nav::after {
@@ -350,7 +358,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 
 /* ---- oven intro (home) ---- */
 .oven-intro {
-  position: fixed; inset: 0; z-index: 100; background: var(--paper);
+  position: fixed; inset: 0; z-index: 260; background: var(--paper);
   display: flex; align-items: center; justify-content: center;
   clip-path: circle(150% at 62% 45%);
 }

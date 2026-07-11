@@ -11,6 +11,7 @@ const D = {
   footer_legal: { en: "© 2026 Boschung Services · sole proprietorship of Tobias Boschung", de: "© 2026 Boschung Services · Einzelunternehmen von Tobias Boschung", fr: "© 2026 Boschung Services · entreprise individuelle de Tobias Boschung", it: "© 2026 Boschung Services · ditta individuale di Tobias Boschung" },
   footer_imprint: { en: "Impressum", de: "Impressum", fr: "Impressum", it: "Impressum" },
   footer_privacy: { en: "Privacy", de: "Datenschutz", fr: "Protection des données", it: "Privacy" },
+  footer_wa: { en: "WhatsApp → message me", de: "WhatsApp → schreib mir", fr: "WhatsApp → écris-moi", it: "WhatsApp → scrivimi" },
   copy_ok: { en: "✓ Copied", de: "✓ Kopiert", fr: "✓ Copié", it: "✓ Copiato" },
   copy_fail: { en: "Couldn't copy — the text is selected, press Ctrl/Cmd+C", de: "Kopieren nicht möglich — der Text ist markiert, drücke Ctrl/Cmd+C", fr: "Copie impossible — le texte est sélectionné, appuie sur Ctrl/Cmd+C", it: "Copia non riuscita — il testo è selezionato, premi Ctrl/Cmd+C" },
   mail_hint: { en: "No mail app opened? Copy the message and send it to boschungservices@gmail.com", de: "Kein Mail-Programm aufgegangen? Kopiere die Nachricht und sende sie an boschungservices@gmail.com", fr: "Pas d'appli mail ? Copie le message et envoie-le à boschungservices@gmail.com", it: "Nessuna app di posta? Copia il messaggio e invialo a boschungservices@gmail.com" },
