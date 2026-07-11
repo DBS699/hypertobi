@@ -20,7 +20,8 @@ export default defineConfig({
         foto: r('foto.html'),
         web: r('web.html'),
         arcade: r('arcade.html'),
-        impressum: r('impressum.html')
+        impressum: r('impressum.html'),
+        datenschutz: r('datenschutz.html')
       }
     }
   }

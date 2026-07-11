@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Seite nicht gefunden · Hypertobi</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: #E3F0C4; color: #201A17;
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; text-align: center; padding: 24px;
+  }
+  .box { max-width: 520px; }
+  h1 { font-size: clamp(70px, 16vw, 130px); margin: 0; line-height: 1; font-weight: 900; letter-spacing: -4px; }
+  h1 span:nth-child(1) { color: #E8402A; }
+  h1 span:nth-child(2) { color: #8A63D2; }
+  h1 span:nth-child(3) { color: #2E5BFF; }
+  p { font-size: 17px; line-height: 1.6; color: #4a423c; }
+  a.pill {
+    display: inline-block; margin-top: 14px; font-weight: 700; font-size: 15px;
+    border: 2px solid #201A17; border-radius: 999px; padding: 11px 24px;
+    background: #fff; color: #201A17; text-decoration: none;
+    box-shadow: 3px 3px 0 #201A17; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.pill:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 #201A17; }
+  .ribbon { position: fixed; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #E8402A 0 25%, #8A63D2 25% 50%, #E17BA4 50% 75%, #2E5BFF 75% 100%); }
+</style>
+</head>
+<body>
+<div class="ribbon" style="top:0"></div>
+<div class="box">
+  <h1><span>4</span><span>0</span><span>4</span></h1>
+  <p>Diese Seite ist wohl im Holzofen gelandet. 🍕<br>Was du suchst, gibt es hier nicht (mehr).</p>
+  <a class="pill" href="/">← Zurück zur Startseite</a>
+</div>
+<div class="ribbon" style="bottom:0"></div>
+</body>
+</html>
