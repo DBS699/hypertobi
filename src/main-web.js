@@ -3,7 +3,7 @@ import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { initModelAmbient } from './js/model-reveal.js';
-import { wireCompose, wireMailHint, val } from './js/compose.js';
+import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
 import { applyPortfolio } from './js/content.js';
 
 initI18n();
@@ -70,3 +70,15 @@ document.getElementById('wb-send').addEventListener('click', () => {
     + '&body=' + encodeURIComponent(msg);
 });
 wireMailHint(document.getElementById('wb-mail'), document.getElementById('wb-note'));
+
+wireDirectSend({
+  button: document.getElementById('wb-direct'),
+  noteEl: document.getElementById('wb-note'),
+  getPayload: () => ({
+    subject: 'Website-Anfrage — ' + val('wb-name'),
+    message: document.getElementById('wb-msg').textContent,
+    name: document.getElementById('wb-name').value,
+    email: document.getElementById('wb-email').value,
+    website: ''
+  })
+});

@@ -3,7 +3,7 @@ import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { initModelAmbient } from './js/model-reveal.js';
-import { wireCompose, wireMailHint, val } from './js/compose.js';
+import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
 import { applyFilmRun } from './js/content.js';
 
 initI18n();
@@ -53,3 +53,15 @@ document.getElementById('fd-send').addEventListener('click', () => {
     + '&body=' + encodeURIComponent(msg);
 });
 wireMailHint(document.getElementById('fd-mail'), document.getElementById('fd-note'));
+
+wireDirectSend({
+  button: document.getElementById('fd-direct'),
+  noteEl: document.getElementById('fd-note'),
+  getPayload: () => ({
+    subject: 'Anmeldung Filmentwicklung — ' + val('fd-name'),
+    message: document.getElementById('fd-msg-out').textContent,
+    name: document.getElementById('fd-name').value,
+    email: document.getElementById('fd-email').value,
+    website: ''
+  })
+});

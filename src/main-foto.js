@@ -2,7 +2,7 @@ import './styles/main.css';
 import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
-import { wireCompose, wireMailHint, val } from './js/compose.js';
+import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
 import { t } from './js/i18n.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { applyPhotos } from './js/content.js';
@@ -211,3 +211,15 @@ wireMailHint(document.getElementById('pr-mail'), document.getElementById('pr-not
 applyPhotos('.gallery-cols').then(() => refresh());
 refresh();
 window.addEventListener('hyper:i18n', refresh);
+
+wireDirectSend({
+  button: document.getElementById('pr-direct'),
+  noteEl: document.getElementById('pr-note'),
+  getPayload: () => ({
+    subject: 'Print-Bestellung — ' + val('pr-name'),
+    message: document.getElementById('pr-msg').textContent,
+    name: document.getElementById('pr-name').value,
+    email: document.getElementById('pr-email').value,
+    website: ''
+  })
+});

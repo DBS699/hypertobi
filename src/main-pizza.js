@@ -2,7 +2,7 @@ import './styles/main.css';
 import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
-import { wireCompose, wireMailHint, val } from './js/compose.js';
+import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { applyPizzaPrices } from './js/content.js';
 
@@ -54,3 +54,15 @@ wireMailHint(document.getElementById('bk-mail'), document.getElementById('bk-not
 
 /* CMS-managed package prices */
 applyPizzaPrices();
+
+wireDirectSend({
+  button: document.getElementById('bk-direct'),
+  noteEl: document.getElementById('bk-note'),
+  getPayload: () => ({
+    subject: 'Anfrage ' + val('bk-type') + ' — ' + val('bk-name'),
+    message: document.getElementById('bk-msg').textContent,
+    name: document.getElementById('bk-name').value,
+    email: document.getElementById('bk-email').value,
+    website: ''
+  })
+});

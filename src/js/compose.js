@@ -43,6 +43,33 @@ export function wireCompose({ trigger, box, msgEl, copyBtn, noteEl, build, requi
   });
 }
 
+/* direct send via /api/contact (Resend) — with honest loading, success and
+   failure states; mailto + copy stay available as fallbacks */
+export function wireDirectSend({ button, noteEl, getPayload }) {
+  if (!button) return;
+  button.addEventListener('click', async () => {
+    const original = button.textContent;
+    button.disabled = true;
+    button.textContent = t('send_sending');
+    noteEl.textContent = '';
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(getPayload()),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error('send failed');
+      button.textContent = t('send_done');
+      noteEl.textContent = data.copy ? t('send_ok_copy') : t('send_ok');
+    } catch (e) {
+      button.disabled = false;
+      button.textContent = original;
+      noteEl.textContent = t('send_fail');
+    }
+  });
+}
+
 /* show a hint under the mailto link — if no mail app is configured the click
    fails silently, so always point to the copy fallback */
 export function wireMailHint(mailLink, noteEl) {
