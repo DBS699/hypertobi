@@ -4,7 +4,9 @@
 // needs a verified domain in Resend and unlocks the confirmation copy
 // to the customer; without it we fall back to the Resend sandbox sender,
 // which may only deliver to the account owner's own inbox.
-const OWNER = 'boschungservices@gmail.com';
+/* Resend sandbox (no verified domain) only delivers to the Resend account
+   owner's address — CONTACT_TO overrides the recipient for that phase */
+const OWNER = process.env.CONTACT_TO || 'boschungservices@gmail.com';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
