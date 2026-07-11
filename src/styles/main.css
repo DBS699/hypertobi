@@ -126,7 +126,8 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .hero h1 {
   font-family: var(--display); font-weight: 800;
   font-size: clamp(44px, 6.5vw, 80px); line-height: 1;
-  letter-spacing: -2.5px; margin: 24px 0 0;
+  /* em, not px: a fixed -2.5px looks cramped once fitHeroH1 shrinks the font */
+  letter-spacing: -0.031em; margin: 24px 0 0;
 }
 /* each headline span is one line — fitHeroH1() shrinks the font instead,
    so the German/French/Italian headlines lie exactly like the English one */
@@ -136,7 +137,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .hero--home .kicker { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--muted); }
 .hero--home h1 {
   font-size: clamp(48px, 8vw, 96px); line-height: 0.98;
-  letter-spacing: -3px; margin: 22px 0 0;
+  letter-spacing: -0.031em; margin: 22px 0 0;
 }
 .hero--home .sub { max-width: 620px; margin: 24px auto 0; }
 .main { max-width: 1160px; width: 100%; margin: 0 auto; padding: 10px 40px 60px; display: flex; flex-direction: column; gap: 40px; }
