@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 const r = (p) => fileURLToPath(new URL(p, import.meta.url))
 
 export default defineConfig({
-  server: { port: 5187 },
+  server: { port: Number(process.env.PORT) || 5187 },
   // the arcade game bundle uses classic JSX with a global-style React identifier
   esbuild: {
     jsx: 'transform',
