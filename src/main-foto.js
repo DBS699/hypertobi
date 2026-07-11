@@ -2,7 +2,7 @@ import './styles/main.css';
 import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
-import { wireCompose, val } from './js/compose.js';
+import { wireCompose, wireMailHint, val } from './js/compose.js';
 import { t } from './js/i18n.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { applyPhotos } from './js/content.js';
@@ -70,7 +70,10 @@ function syncGallery() {
     const n = numOf(f);
     f.classList.toggle('selected', cart.has(n));
     const chip = f.querySelector('.order-chip');
-    if (chip) chip.textContent = cart.has(n) ? t('ft_selected') : t('ft_order');
+    if (chip) {
+      chip.textContent = cart.has(n) ? t('ft_selected') : t('ft_order');
+      chip.setAttribute('aria-pressed', String(cart.has(n)));
+    }
   });
 }
 
@@ -86,6 +89,11 @@ function renderCart() {
   cart.forEach((size, num) => {
     const row = document.createElement('div');
     row.className = 'cart-row' + (num === activeNum ? ' active' : '');
+    row.setAttribute('role', 'button');
+    row.tabIndex = 0;
+    row.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activeNum = num; renderCart(); updatePreview(); }
+    });
     const img = document.createElement('img');
     img.src = frameByNum(num)?.querySelector('img')?.src || '';
     img.alt = '№ ' + num;
@@ -103,7 +111,7 @@ function renderCart() {
         e.stopPropagation();
         cart.set(num, s);
         activeNum = num;
-        renderCart(); updatePreview();
+        refresh();
       });
       sizes.appendChild(b);
     });
@@ -148,7 +156,11 @@ function updatePreview() {
   probe.src = src;
 }
 
-function refresh() { syncGallery(); renderCart(); updatePreview(); }
+function refresh() {
+  syncGallery(); renderCart(); updatePreview();
+  const box = document.getElementById('pr-box');
+  if (box) box.hidden = true;
+}
 
 /* tap a photo (or its chip) to toggle selection — delegated so it survives
    the CMS rewriting the gallery */
@@ -174,11 +186,14 @@ wireCompose({
   msgEl: document.getElementById('pr-msg'),
   copyBtn: document.getElementById('pr-copy'),
   noteEl: document.getElementById('pr-note'),
+  requiredIds: ['pr-name', 'pr-email'],
+  watch: document.getElementById('prints'),
   build: () => {
     if (!cart.size) return t('ft_cart_empty');
     return 'Hi Tobi! Ich möchte Prints bestellen.\n' +
       [...cart.entries()].map(([n, s]) => '– Foto № ' + n + ' — ' + s).join('\n') +
-      '\nName: ' + val('pr-name');
+      '\nName: ' + val('pr-name') +
+      '\nE-Mail: ' + val('pr-email');
   }
 });
 
@@ -190,6 +205,7 @@ document.getElementById('pr-send').addEventListener('click', () => {
     + '?subject=' + encodeURIComponent('Print-Bestellung — ' + (document.getElementById('pr-name').value || ''))
     + '&body=' + encodeURIComponent(msg);
 });
+wireMailHint(document.getElementById('pr-mail'), document.getElementById('pr-note'));
 
 /* CMS-managed gallery photos, then paint the initial cart/selection state */
 applyPhotos('.gallery-cols').then(() => refresh());

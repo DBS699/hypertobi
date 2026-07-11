@@ -104,6 +104,10 @@ export function initPeel() {
     const hideFace = () => { face.style.visibility = 'hidden'; face.style.pointerEvents = 'none'; };
     const showFace = () => { face.style.removeProperty('visibility'); face.style.removeProperty('pointer-events'); };
 
+    /* keyboard: Enter/Space triggers the same peel */
+    corner.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); corner.click(); }
+    });
     corner.addEventListener('click', () => {
       if (state.busy) return;
 

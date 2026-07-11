@@ -31,7 +31,7 @@
       <a class="nav-link" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
       <a class="nav-link active" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
       <a class="nav-link" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
-      <a class="nav-link" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <a class="nav-link" data-c="arcade" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
       <div class="lang-toggle">
         <button data-lang="de">DE</button>
         <button data-lang="en">EN</button>
@@ -114,7 +114,10 @@
       <div style="background:#fff;border:2px solid #201A17;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px">
         <div data-i18n="ft_cart_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px">Your selection</div>
         <div id="cart-list" class="cart-list"></div>
-        <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="pr-name" type="text"></label>
+        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="pr-name" type="text" required></label>
+          <label class="field"><span data-i18n="fld_l_email">Email</span><input id="pr-email" type="email" required></label>
+        </div>
         <button id="pr-send" data-i18n="ft_compose" class="pill" style="align-self:flex-start;background:#201A17;color:#FAF4E8;--sh:#9a8f83;padding:11px 22px">Compose order</button>
         <div id="pr-box" class="compose-box" hidden>
           <pre id="pr-msg"></pre>

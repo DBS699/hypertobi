@@ -11,6 +11,9 @@ const D = {
   footer_legal: { en: "© 2026 Boschung Services · sole proprietorship of Tobias Boschung", de: "© 2026 Boschung Services · Einzelunternehmen von Tobias Boschung", fr: "© 2026 Boschung Services · entreprise individuelle de Tobias Boschung", it: "© 2026 Boschung Services · ditta individuale di Tobias Boschung" },
   footer_imprint: { en: "Impressum", de: "Impressum", fr: "Impressum", it: "Impressum" },
   footer_privacy: { en: "Privacy", de: "Datenschutz", fr: "Protection des données", it: "Privacy" },
+  copy_ok: { en: "✓ Copied", de: "✓ Kopiert", fr: "✓ Copié", it: "✓ Copiato" },
+  copy_fail: { en: "Couldn't copy — the text is selected, press Ctrl/Cmd+C", de: "Kopieren nicht möglich — der Text ist markiert, drücke Ctrl/Cmd+C", fr: "Copie impossible — le texte est sélectionné, appuie sur Ctrl/Cmd+C", it: "Copia non riuscita — il testo è selezionato, premi Ctrl/Cmd+C" },
+  mail_hint: { en: "No mail app opened? Copy the message and send it to boschungservices@gmail.com", de: "Kein Mail-Programm aufgegangen? Kopiere die Nachricht und sende sie an boschungservices@gmail.com", fr: "Pas d'appli mail ? Copie le message et envoie-le à boschungservices@gmail.com", it: "Nessuna app di posta? Copia il messaggio e invialo a boschungservices@gmail.com" },
   view3d: { en: "View in 3D", de: "In 3D ansehen", fr: "Voir en 3D", it: "Guarda in 3D" },
 
   /* ===== home ===== */
@@ -48,7 +51,7 @@ const D = {
   pz_ws_b3: { en: "Long table dinner together", de: "Gemeinsames Essen am langen Tisch", fr: "Repas ensemble à la grande table", it: "Cena insieme al tavolo lungo" },
   pz_form_title: { en: "Request a date", de: "Datum anfragen", fr: "Demander une date", it: "Richiedi una data" },
   pz_l_name: { en: "Your name", de: "Dein Name", fr: "Ton nom", it: "Il tuo nome" },
-  pz_l_email: { en: "Email", de: "Email", fr: "Email", it: "Email" },
+  pz_l_email: { en: "Email", de: "E-Mail", fr: "E-mail", it: "E-mail" },
   pz_l_date: { en: "Event date", de: "Datum", fr: "Date", it: "Data" },
   pz_l_guests: { en: "Guests", de: "Gäste", fr: "Invités", it: "Ospiti" },
   pz_l_where: { en: "Location", de: "Ort", fr: "Lieu", it: "Luogo" },
@@ -195,7 +198,14 @@ const D = {
   wb_how2: { en: "You get a draft", de: "Du kriegst einen Entwurf", fr: "Tu reçois une maquette", it: "Ricevi una bozza" },
   wb_how3: { en: "Live within days", de: "Online in wenigen Tagen", fr: "En ligne en quelques jours", it: "Online in pochi giorni" },
   wb_wink: { en: "You're looking at my portfolio right now.", de: "Du schaust gerade auf mein Portfolio.", fr: "Tu regardes mon portfolio en ce moment même.", it: "Stai guardando il mio portfolio proprio ora." },
-  wb_cta: { en: "Tell me about your project", de: "Erzähl mir von deinem Projekt", fr: "Parle-moi de ton projet", it: "Raccontami il tuo progetto" }
+  wb_cta: { en: "Tell me about your project", de: "Erzähl mir von deinem Projekt", fr: "Parle-moi de ton projet", it: "Raccontami il tuo progetto" },
+  wb_form_title: { en: "Tell me about your project.", de: "Erzähl mir von deinem Projekt.", fr: "Parle-moi de ton projet.", it: "Raccontami il tuo progetto." },
+  wb_form_body: { en: "No agency process: describe your project in two sentences and you'll get an honest estimate by email.", de: "Kein Agentur-Prozess: Beschreib dein Projekt in zwei Sätzen und du bekommst eine ehrliche Einschätzung per E-Mail.", fr: "Pas de processus d'agence : décris ton projet en deux phrases et tu recevras une estimation honnête par e-mail.", it: "Nessun processo da agenzia: descrivi il tuo progetto in due frasi e riceverai una stima onesta via e-mail." },
+  wb_l_type: { en: "What do you need?", de: "Was brauchst du?", fr: "De quoi as-tu besoin ?", it: "Di cosa hai bisogno?" },
+  wb_t_new: { en: "New website", de: "Neue Website", fr: "Nouveau site", it: "Nuovo sito" },
+  wb_t_redesign: { en: "Redesign", de: "Redesign", fr: "Refonte", it: "Redesign" },
+  wb_t_unsure: { en: "Not sure yet", de: "Weiss noch nicht", fr: "Je ne sais pas encore", it: "Non lo so ancora" },
+  wb_ph_msg: { en: "What is the site for? Is there content already?", de: "Wofür ist die Website? Gibt es schon Inhalte?", fr: "À quoi sert le site ? Le contenu existe-t-il déjà ?", it: "A cosa serve il sito? I contenuti esistono già?" }
 };
 
 const KEY = 'hypertobi_lang';
@@ -222,6 +232,7 @@ export function apply(lang) {
     const active = el.getAttribute('data-lang') === lang;
     el.style.background = active ? '#201A17' : 'transparent';
     el.style.color = active ? '#FAF4E8' : '#6B6157';
+    el.setAttribute('aria-pressed', String(active));
   });
   document.documentElement.lang = lang;
   fitHeroH1();

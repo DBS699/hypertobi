@@ -66,6 +66,15 @@ function init() {
       btn.setAttribute('aria-expanded', 'false');
     }
   });
+
+  /* Escape closes the panel too */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('nav--open')) {
+      nav.classList.remove('nav--open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    }
+  });
 }
 
 init();

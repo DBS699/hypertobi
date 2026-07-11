@@ -3,7 +3,7 @@ import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { initModelAmbient } from './js/model-reveal.js';
-import { wireCompose, val } from './js/compose.js';
+import { wireCompose, wireMailHint, val } from './js/compose.js';
 import { applyFilmRun } from './js/content.js';
 
 initI18n();
@@ -31,6 +31,8 @@ wireCompose({
   msgEl: document.getElementById('fd-msg-out'),
   copyBtn: document.getElementById('fd-copy'),
   noteEl: document.getElementById('fd-note'),
+  requiredIds: ['fd-name', 'fd-email'],
+  watch: document.getElementById('devrun'),
   build: () =>
     'Hi Tobi! Ich melde mich für die nächste Filmentwicklung an.\n' +
     'Name: ' + val('fd-name') + '\n' +
@@ -50,3 +52,4 @@ document.getElementById('fd-send').addEventListener('click', () => {
     + '?subject=' + encodeURIComponent('Anmeldung Filmentwicklung — ' + (document.getElementById('fd-name').value || ''))
     + '&body=' + encodeURIComponent(msg);
 });
+wireMailHint(document.getElementById('fd-mail'), document.getElementById('fd-note'));

@@ -3,6 +3,7 @@ import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { initModelAmbient } from './js/model-reveal.js';
+import { wireCompose, wireMailHint, val } from './js/compose.js';
 import { applyPortfolio } from './js/content.js';
 
 initI18n();
@@ -42,3 +43,30 @@ setTimeout(winkOnce, 1500);
 
 /* CMS-managed live portfolio */
 applyPortfolio();
+
+/* project inquiry -> email to boschungservices@gmail.com */
+wireCompose({
+  trigger: document.getElementById('wb-send'),
+  box: document.getElementById('wb-box'),
+  msgEl: document.getElementById('wb-msg'),
+  copyBtn: document.getElementById('wb-copy'),
+  noteEl: document.getElementById('wb-note'),
+  requiredIds: ['wb-name', 'wb-email'],
+  watch: document.getElementById('anfrage'),
+  build: () =>
+    'Hi Tobi! Ich interessiere mich für eine Website.\n' +
+    'Projekt: ' + val('wb-type') + '\n' +
+    'Name: ' + val('wb-name') + '\n' +
+    'E-Mail: ' + val('wb-email') + '\n' +
+    'Beschreibung: ' + val('wb-msg-in')
+});
+
+/* fill the mailto link whenever the message box is (re)built */
+document.getElementById('wb-send').addEventListener('click', () => {
+  const msg = document.getElementById('wb-msg').textContent;
+  const mail = document.getElementById('wb-mail');
+  mail.href = 'mailto:boschungservices@gmail.com'
+    + '?subject=' + encodeURIComponent('Website-Anfrage — ' + (document.getElementById('wb-name').value || ''))
+    + '&body=' + encodeURIComponent(msg);
+});
+wireMailHint(document.getElementById('wb-mail'), document.getElementById('wb-note'));

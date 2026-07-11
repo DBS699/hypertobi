@@ -31,7 +31,7 @@
       <a class="nav-link" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
       <a class="nav-link" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
       <a class="nav-link active" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
-      <a class="nav-link" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <a class="nav-link" data-c="arcade" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
       <div class="lang-toggle">
         <button data-lang="de">DE</button>
         <button data-lang="en">EN</button>
@@ -115,7 +115,33 @@
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px">
         <span data-i18n="wb_wink" style="font-size:13.5px;font-style:italic;opacity:.9">You're looking at my portfolio right now.</span>
-        <a data-i18n="wb_cta" class="pill" style="color:#2E5BFF;padding:11px 22px" href="https://instagram.com/hypertobi" target="_blank" rel="noopener">Tell me about your project</a>
+        <a data-i18n="wb_cta" class="pill" style="color:#2E5BFF;padding:11px 22px" href="#anfrage">Tell me about your project</a>
+      </div>
+    </section>
+
+
+    <!-- INQUIRY -->
+    <section id="anfrage" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.7fr 1.3fr;gap:36px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h2 data-i18n="wb_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Tell me about your project.</h2>
+        <p data-i18n="wb_form_body" style="font-size:13.5px;line-height:1.6;color:#6B6157;margin:0">No agency process: describe your project in two sentences and you'll get an honest estimate by email.</p>
+      </div>
+      <div>
+        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="wb-name" type="text" required></label>
+          <label class="field"><span data-i18n="fld_l_email">Email</span><input id="wb-email" type="email" required></label>
+          <label class="field" style="grid-column:span 2"><span data-i18n="wb_l_type">What do you need?</span><select id="wb-type"><option data-i18n="wb_t_new" value="Neue Website">New website</option><option data-i18n="wb_t_redesign" value="Redesign">Redesign</option><option data-i18n="wb_t_unsure" value="Weiss noch nicht">Not sure yet</option></select></label>
+          <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="wb-msg-in" rows="3" data-i18n-ph="wb_ph_msg" placeholder="What is the site for? Is there content already?"></textarea></label>
+        </div>
+        <button id="wb-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#2E5BFF;color:#fff">Compose my request</button>
+        <div id="wb-box" class="compose-box" hidden style="margin-top:20px">
+          <pre id="wb-msg"></pre>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <a id="wb-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#2E5BFF;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
+            <button id="wb-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
+            <span id="wb-note" class="copied-note"></span>
+          </div>
+        </div>
       </div>
     </section>
 

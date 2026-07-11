@@ -32,7 +32,7 @@
       <a class="nav-link active" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
       <a class="nav-link" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
       <a class="nav-link" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
-      <a class="nav-link" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <a class="nav-link" data-c="arcade" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
       <div class="lang-toggle">
         <button data-lang="de">DE</button>
         <button data-lang="en">EN</button>
@@ -57,7 +57,7 @@
   <main class="main">
 
     <!-- NEXT DEV RUN -->
-    <section class="card" data-anim="card" style="background:#8A63D2;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap">
+    <section class="card" data-anim="card" style="background:#845FCA;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap">
       <div style="display:flex;flex-direction:column;gap:6px">
         <span data-i18n="fld_next" style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;opacity:.85">Next development run</span>
         <span data-film="date" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3.4vw,38px);letter-spacing:-1px">Samstag, 19. Juli 2026</span>
@@ -140,20 +140,20 @@
       </div>
       <div>
         <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <label class="field"><span data-i18n="fld_l_name">Your name</span><input id="fd-name" type="text"></label>
-          <label class="field"><span data-i18n="fld_l_email">Email</span><input id="fd-email" type="email"></label>
+          <label class="field"><span data-i18n="fld_l_name">Your name</span><input id="fd-name" type="text" required></label>
+          <label class="field"><span data-i18n="fld_l_email">Email</span><input id="fd-email" type="email" required></label>
           <label class="field"><span data-i18n="fld_l_count">Number of rolls</span><input id="fd-count" type="number" min="1" value="1"></label>
           <label class="field"><span data-i18n="fld_l_type">Film type</span><select id="fd-type"><option value="C-41 (Farbe)">C-41 (colour)</option><option value="S/W">B&amp;W</option><option value="Gemischt">Mixed</option></select></label>
           <label class="field"><span data-i18n="fld_l_format">Format</span><select id="fd-format"><option value="35mm">35mm</option><option value="120">120</option><option value="Gemischt">Mixed</option></select></label>
           <label class="field"><span data-i18n="fld_l_push">Push / Pull</span><select id="fd-push"><option value="Nein">No</option><option value="+1">+1</option><option value="+2">+2</option><option value="-1">−1</option></select></label>
           <label class="field" style="grid-column:span 2"><span data-i18n="fld_l_msg">Notes</span><textarea id="fd-msg" rows="2" data-i18n-ph="fld_ph_msg" placeholder="Special wishes? (TIFF scans, cut negatives…)"></textarea></label>
         </div>
-        <button id="fd-send" data-i18n="fld_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#8A63D2;color:#fff">Compose my sign-up</button>
+        <button id="fd-send" data-i18n="fld_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#845FCA;color:#fff">Compose my sign-up</button>
 
         <div id="fd-box" class="compose-box" hidden style="margin-top:20px">
           <pre id="fd-msg-out"></pre>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a id="fd-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#8A63D2;color:#fff;--sh:#201A17" href="#">Send email → boschungservices@gmail.com</a>
+            <a id="fd-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#845FCA;color:#fff;--sh:#201A17" href="#">Send email → boschungservices@gmail.com</a>
             <button id="fd-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
             <span id="fd-note" class="copied-note"></span>
           </div>

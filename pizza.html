@@ -32,7 +32,7 @@
       <a class="nav-link" data-c="film" href="/film.html"><span data-i18n="nav_film">Film Lab</span></a>
       <a class="nav-link" data-c="foto" href="/foto.html"><span data-i18n="nav_foto">Photos</span></a>
       <a class="nav-link" data-c="web" href="/web.html"><span data-i18n="nav_web">Websites</span></a>
-      <a class="nav-link" data-c="pizza" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
+      <a class="nav-link" data-c="arcade" href="/arcade.html"><span data-i18n="nav_arcade">Arcade</span></a>
       <div class="lang-toggle">
         <button data-lang="de">DE</button>
         <button data-lang="en">EN</button>
@@ -68,7 +68,7 @@
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_offer_t">This is what I offer.</h2>
       <div class="grid-2">
       <!-- Catering card -->
-      <section class="card" data-anim="card" style="background:#E8402A;color:#fff;display:flex;flex-direction:column;gap:16px">
+      <section class="card" data-anim="card" style="background:#D53B27;color:#fff;display:flex;flex-direction:column;gap:16px">
         <h2 class="h2" data-i18n="pz_cat_title">Catering</h2>
         <p data-i18n="pz_cat_body" style="font-size:14.5px;line-height:1.6;margin:0">I bring the oven, the dough and the hype — you bring the people. Fresh Neapolitan pizza, stretched and fired in front of your guests, one after the other until everyone is happy.</p>
         <div class="swipe-gal" aria-label="Impressions — swipe">
@@ -120,20 +120,20 @@
       </div>
       <div>
         <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text"></label>
-          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email"></label>
-          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date"></label>
+          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text" required></label>
+          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email" required></label>
+          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date" required></label>
           <label class="field"><span data-i18n="pz_l_guests">Guests</span><input id="bk-guests" type="number" min="1"></label>
           <label class="field"><span data-i18n="pz_l_where">Location</span><input id="bk-where" type="text"></label>
           <label class="field"><span data-i18n="pz_l_type">What do you need?</span><select id="bk-type"><option data-i18n="pz_t_cat" value="Catering">Catering</option><option data-i18n="pz_t_ws" value="Workshop / Teambuilding">Workshop / Teambuilding</option></select></label>
           <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="bk-msg-in" rows="3" data-i18n-ph="pz_ph_msg" placeholder="Special requests? (vegetarian, gluten-free…)"></textarea></label>
         </div>
-        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#E8402A;color:#fff">Compose my request</button>
+        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#D53B27;color:#fff">Compose my request</button>
 
         <div id="bk-box" class="compose-box" hidden style="margin-top:20px">
           <pre id="bk-msg"></pre>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a id="bk-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#E8402A;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
+            <a id="bk-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#D53B27;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
             <button id="bk-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
             <span id="bk-note" class="copied-note"></span>
           </div>
