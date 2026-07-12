@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danke für deine Bestellung! · Hypertobi</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: #E3F0C4; color: #201A17;
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; text-align: center; padding: 24px;
+  }
+  .box { max-width: 560px; }
+  h1 { font-size: clamp(42px, 9vw, 72px); margin: 0 0 8px; line-height: 1.05; font-weight: 900; letter-spacing: -2px; }
+  h1 span { color: #E17BA4; }
+  p { font-size: 17px; line-height: 1.65; color: #4a423c; }
+  .small { font-size: 13.5px; color: #6B6157; }
+  a.pill {
+    display: inline-block; margin-top: 16px; font-weight: 700; font-size: 15px;
+    border: 2px solid #201A17; border-radius: 999px; padding: 11px 24px;
+    background: #fff; color: #201A17; text-decoration: none;
+    box-shadow: 3px 3px 0 #201A17; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.pill:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 #201A17; }
+  .ribbon { position: fixed; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #E8402A 0 25%, #8A63D2 25% 50%, #E17BA4 50% 75%, #2E5BFF 75% 100%); }
+</style>
+</head>
+<body>
+<div class="ribbon" style="top:0"></div>
+<div class="box">
+  <h1>Merci<span>!</span> 🖼</h1>
+  <p><strong>Deine Print-Bestellung ist bezahlt und bei mir eingegangen.</strong><br>
+  Die Zahlungsbestätigung von Stripe landet gleich in deinem Postfach. Ich mache mich an
+  den Druck und melde mich, sobald dein Print unterwegs ist — flach verpackt, versichert,
+  mit Liebe.</p>
+  <p class="small">Fragen zur Bestellung? Einfach auf die Bestätigungsmail antworten oder an
+  boschungservices@gmail.com schreiben.</p>
+  <a class="pill" href="/foto.html">← Zurück zur Galerie</a>
+</div>
+<div class="ribbon" style="bottom:0"></div>
+</body>
+</html>

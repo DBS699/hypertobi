@@ -3,7 +3,7 @@ import './js/nav.js';
 import { initI18n } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
-import { t } from './js/i18n.js';
+import { t, current } from './js/i18n.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { applyPhotos } from './js/content.js';
 
@@ -139,6 +139,7 @@ function renderCart() {
   document.getElementById('cart-count').textContent = cart.size;
   const totalEl = document.getElementById('cart-total');
   totalEl.hidden = !cart.size;
+  document.getElementById('pr-pay').hidden = !cart.size;
   document.getElementById('cart-total-num').textContent =
     [...cart.values()].reduce((sum, s) => sum + PRICES[s], 0);
 }
@@ -232,4 +233,31 @@ wireDirectSend({
     email: document.getElementById('pr-email').value,
     website: ''
   })
+});
+
+/* pay now -> Stripe Checkout (hosted page: TWINT, card, Apple/Google Pay) */
+document.getElementById('pr-pay').addEventListener('click', async () => {
+  const btn = document.getElementById('pr-pay');
+  const note = document.getElementById('pr-note');
+  if (!cart.size) return;
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = t('ft_pay_loading');
+  try {
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        items: [...cart.entries()].map(([num, size]) => ({ num, size })),
+        lang: current()
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.url) throw new Error('checkout failed');
+    window.location.href = data.url;
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = original;
+    note.textContent = t('ft_pay_fail');
+  }
 });
