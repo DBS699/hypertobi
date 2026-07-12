@@ -101,47 +101,6 @@
     </section>
 
 
-    <!-- HOW IT WORKS -->
-    <section data-anim="card">
-      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_how_t">How it works.</h2>
-      <div class="grid-4 how-grid">
-        <div class="card how-card"><span class="hn">1</span><div class="ht" data-i18n="pz_how1_t">Request your date</div><p data-i18n="pz_how1_b">Form below — you hear back within 48 h with a fixed quote.</p></div>
-        <div class="card how-card"><span class="hn">2</span><div class="ht" data-i18n="pz_how2_t">I arrive ~1 h early</div><p data-i18n="pz_how2_b">Oven setup: all I need is a flat spot of about 3×2 m and a sturdy table.</p></div>
-        <div class="card how-card"><span class="hn">3</span><div class="ht" data-i18n="pz_how3_t">1.5–2 h live baking</div><p data-i18n="pz_how3_b">Pizzas fly out nonstop — stretched, topped and fired in front of your guests.</p></div>
-        <div class="card how-card"><span class="hn">4</span><div class="ht" data-i18n="pz_how4_t">30 min teardown</div><p data-i18n="pz_how4_b">I pack up and leave the place as clean as I found it.</p></div>
-      </div>
-    </section>
-
-    <!-- BOOKING -->
-    <section id="booking" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.7fr 1.3fr;gap:36px;align-items:start">
-      <div style="display:flex;flex-direction:column;gap:14px;position:sticky;top:96px">
-        <h2 data-i18n="pz_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Request a date</h2>
-        <p data-i18n="pz_note" style="font-size:13.5px;line-height:1.6;color:#6B6157;margin:0">No booking system, no spam — this writes an email you send me with one click.</p>
-      </div>
-      <div>
-        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text" required></label>
-          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email" required></label>
-          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date" required></label>
-          <label class="field"><span data-i18n="pz_l_guests">Guests</span><input id="bk-guests" type="number" min="1"></label>
-          <label class="field"><span data-i18n="pz_l_where">Location</span><input id="bk-where" type="text"></label>
-          <label class="field"><span data-i18n="pz_l_type">What do you need?</span><select id="bk-type"><option data-i18n="pz_t_cat" value="Catering">Catering</option><option data-i18n="pz_t_ws" value="Workshop / Teambuilding">Workshop / Teambuilding</option></select></label>
-          <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="bk-msg-in" rows="3" data-i18n-ph="pz_ph_msg" placeholder="Special requests? (vegetarian, gluten-free…)"></textarea></label>
-        </div>
-        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#D53B27;color:#fff">Compose my request</button>
-
-        <div id="bk-box" class="compose-box" hidden style="margin-top:20px">
-          <pre id="bk-msg"></pre>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <button id="bk-direct" data-i18n="send_direct" class="pill" style="font-size:13px;background:#D53B27;color:#fff">Send directly</button>
-            <a id="bk-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#D53B27;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
-            <button id="bk-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
-            <span id="bk-note" class="copied-note"></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- PACKAGES -->
     <section data-anim="card">
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_pk_t">Packages &amp; prices.</h2>
@@ -186,6 +145,18 @@
       <p class="menu-note" data-i18n="pz_pk_note">Travel within 60 km of Bern included — further by arrangement. Kids under 6 eat free.</p>
     </section>
 
+    <!-- HOW IT WORKS -->
+    <section data-anim="card">
+      <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_how_t">How it works.</h2>
+      <div class="grid-4 how-grid">
+        <div class="card how-card"><span class="hn">1</span><div class="ht" data-i18n="pz_how1_t">Request your date</div><p data-i18n="pz_how1_b">Form below — you hear back within 48 h with a fixed quote.</p></div>
+        <div class="card how-card"><span class="hn">2</span><div class="ht" data-i18n="pz_how2_t">I arrive ~1 h early</div><p data-i18n="pz_how2_b">Oven setup: all I need is a flat spot of about 3×2 m and a sturdy table.</p></div>
+        <div class="card how-card"><span class="hn">3</span><div class="ht" data-i18n="pz_how3_t">1.5–2 h live baking</div><p data-i18n="pz_how3_b">Pizzas fly out nonstop — stretched, topped and fired in front of your guests.</p></div>
+        <div class="card how-card"><span class="hn">4</span><div class="ht" data-i18n="pz_how4_t">30 min teardown</div><p data-i18n="pz_how4_b">I pack up and leave the place as clean as I found it.</p></div>
+      </div>
+    </section>
+
+
     <!-- GOOD TO KNOW -->
     <section data-anim="card">
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_faq_t">Good to know.</h2>
@@ -198,6 +169,38 @@
         <details><summary data-i18n="pz_f6_q">Deposit &amp; cancellation?</summary><p class="a" data-i18n="pz_f6_a">Your date is fixed with a 20% deposit. Free cancellation up to 14 days before the event — after that we simply find a new date.</p></details>
       </div>
     </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="card booking-grid" data-anim="card" style="background:#fff;padding:32px;display:grid;grid-template-columns:0.7fr 1.3fr;gap:36px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px;position:sticky;top:96px">
+        <h2 data-i18n="pz_form_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Request a date</h2>
+        <p style="font-size:14px;margin:0"><span data-i18n="pz_sel_pkg">Selected package</span>: <strong id="bk-pkg">La Festa</strong></p>
+        <p data-i18n="pz_note" style="font-size:13.5px;line-height:1.6;color:#6B6157;margin:0">No booking system, no spam — this writes an email you send me with one click.</p>
+      </div>
+      <div>
+        <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label class="field"><span data-i18n="pz_l_name">Your name</span><input id="bk-name" type="text" required></label>
+          <label class="field"><span data-i18n="pz_l_email">Email</span><input id="bk-email" type="email" required></label>
+          <label class="field"><span data-i18n="pz_l_date">Event date</span><input id="bk-date" type="date" required></label>
+          <label class="field"><span data-i18n="pz_l_guests">Guests</span><input id="bk-guests" type="number" min="1"></label>
+          <label class="field"><span data-i18n="pz_l_where">Location</span><input id="bk-where" type="text"></label>
+          <label class="field"><span data-i18n="pz_l_type">What do you need?</span><select id="bk-type"><option data-i18n="pz_t_cat" value="Catering">Catering</option><option data-i18n="pz_t_ws" value="Workshop / Teambuilding">Workshop / Teambuilding</option></select></label>
+          <label class="field" style="grid-column:span 2"><span data-i18n="pz_l_msg">Message</span><textarea id="bk-msg-in" rows="3" data-i18n-ph="pz_ph_msg" placeholder="Special requests? (vegetarian, gluten-free…)"></textarea></label>
+        </div>
+        <button id="bk-send" data-i18n="pz_send" class="pill" style="margin-top:18px;font-size:15px;padding:12px 26px;background:#D53B27;color:#fff">Compose my request</button>
+
+        <div id="bk-box" class="compose-box" hidden style="margin-top:20px">
+          <pre id="bk-msg"></pre>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button id="bk-direct" data-i18n="send_direct" class="pill" style="font-size:13px;background:#D53B27;color:#fff">Send directly</button>
+            <a id="bk-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;background:#D53B27;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
+            <button id="bk-copy" data-i18n="pz_copy" class="pill" style="font-size:13px">Copy message</button>
+            <span id="bk-note" class="copied-note"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 

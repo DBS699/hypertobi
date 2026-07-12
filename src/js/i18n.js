@@ -47,6 +47,7 @@ const D = {
   pz_h1a: { en: "Neapolitan pizza,", de: "Neapolitanische Pizza,", fr: "Pizza napolitaine,", it: "Pizza napoletana," },
   pz_h1b: { en: "wherever you party.", de: "wo auch immer du feierst.", fr: "où que tu fasses la fête.", it: "ovunque tu faccia festa." },
   pz_offer_t: { en: "This is what I offer.", de: "Das biete ich an.", fr: "Voici ce que je propose.", it: "Questo è ciò che offro." },
+  pz_sel_pkg: { en: "Selected package", de: "Gewähltes Paket", fr: "Forfait choisi", it: "Pacchetto scelto" },
   pz_sub: { en: "Catering for weddings, offices & birthdays — or roll up your sleeves in a workshop and learn it yourself.", de: "Catering für Hochzeiten, Firmen & Geburtstage — oder kremple die Ärmel hoch und lern es im Workshop selbst.", fr: "Traiteur pour mariages, entreprises & anniversaires — ou retrousse tes manches et apprends-le toi-même en atelier.", it: "Catering per matrimoni, aziende & compleanni — oppure rimboccati le maniche e imparalo tu stesso in un workshop." },
   pz_chip1: { en: "Wood-fired · 450°C", de: "Holzofen · 450°C", fr: "Feu de bois · 450°C", it: "Forno a legna · 450°C" },
   pz_chip2: { en: "10–150 guests", de: "10–150 Gäste", fr: "10–150 invités", it: "10–150 ospiti" },

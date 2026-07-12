@@ -517,7 +517,12 @@ html[data-paper="silver"] { --paper: #E4E6E9; }
 .sec-title { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4vw, 44px); letter-spacing: -1.5px; line-height: 1.05; margin: 0 0 6px; }
 .sec-sub { font-size: 15px; line-height: 1.6; margin: 0 0 22px; max-width: 640px; }
 .menu-note { font-size: 13.5px; font-weight: 700; margin: 18px 0 0; }
-.pk-card { background: #fff; padding: 24px; display: flex; flex-direction: column; gap: 10px; position: relative; }
+.pk-card {
+  background: #fff; padding: 24px; display: flex; flex-direction: column; gap: 10px;
+  position: relative; cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.pk-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
 .pk-card--hot { background: var(--ink); color: #FAF4E8; }
 .pk-flag {
   position: absolute; top: -14px; right: 18px; background: #FFD23E; color: var(--ink);
