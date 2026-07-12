@@ -1,6 +1,6 @@
 import './styles/main.css';
 import './js/nav.js';
-import { initI18n } from './js/i18n.js';
+import { initI18n, t, current } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { initModelAmbient } from './js/model-reveal.js';
 import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
@@ -64,4 +64,43 @@ wireDirectSend({
     email: document.getElementById('fd-email').value,
     website: ''
   })
+});
+
+/* sign up & pay now -> Stripe Checkout (CHF 20 x rolls, details ride in metadata) */
+document.getElementById('fd-pay').addEventListener('click', async () => {
+  for (const id of ['fd-name', 'fd-email']) {
+    const el = document.getElementById(id);
+    if (el && !el.reportValidity()) return;
+  }
+  const btn = document.getElementById('fd-pay');
+  const note = document.getElementById('fd-note');
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = t('ft_pay_loading');
+  try {
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'film',
+        count: val('fd-count'),
+        lang: current(),
+        details: {
+          name: val('fd-name'),
+          email: val('fd-email'),
+          filmtype: val('fd-type'),
+          format: val('fd-format'),
+          push: val('fd-push'),
+          notes: document.getElementById('fd-msg').value
+        }
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.url) throw new Error('checkout failed');
+    window.location.href = data.url;
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = original;
+    note.textContent = t('ft_pay_fail');
+  }
 });
