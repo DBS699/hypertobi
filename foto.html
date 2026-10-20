@@ -55,6 +55,7 @@
 
   <!-- GALLERY -->
   <main class="main" style="padding-bottom:70px">
+    <p class="m-only m-hint" data-i18n="ft_tap_hint">Tap a photo to add it to your order.</p>
     <div class="gallery-panel">
       <div class="gallery-cols">
         <div class="foto-frame" data-anim="card" style="--tilt:-0.6deg">
@@ -89,12 +90,12 @@
     </div>
 
     <!-- PRINTS -->
-    <section id="prints" class="card booking-grid" data-anim="card" style="background:#E17BA4;color:#201A17;padding:32px;display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:start">
+    <section id="prints" class="card booking-grid" data-anim="card" style="background:#B44770;color:#fff;padding:32px;display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:14px">
         <h2 data-i18n="ft_print_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1.5px;line-height:1.05;margin:0">Buy a print</h2>
         <p data-i18n="ft_print_body" style="font-size:14px;line-height:1.6;margin:0">Every photo in the gallery is available as a lab-quality print — numbered, packed flat, shipped within Switzerland. Tell me which one and how big.</p>
         <!-- sample living room: the active print hangs above the sofa, to scale -->
-        <div class="room" aria-hidden="true">
+        <div class="room d-only" aria-hidden="true">
           <div class="room-floor"></div>
           <div class="room-sofa">
             <div class="sofa-back"></div>
@@ -108,10 +109,10 @@
           <div id="rp-frame" class="print-on-wall" hidden><img id="rp-img" alt="Print preview"></div>
           <span id="rp-size" class="rp-size-tag" hidden>A4</span>
         </div>
-        <p data-i18n="ft_preview_hint" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.8">Sample living room — the print is shown to scale above the sofa.</p>
-        <p data-i18n="ft_print_note" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.75">Prices depend on size &amp; paper — I'll confirm by email.</p>
+        <p class="d-only" data-i18n="ft_preview_hint" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.92">Sample living room — the print is shown to scale above the sofa.</p>
+        <p data-i18n="ft_print_note" style="font-size:12.5px;line-height:1.5;margin:0;opacity:.88">Prices depend on size &amp; paper — I'll confirm by email.</p>
       </div>
-      <div style="background:#fff;border:2px solid #201A17;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px">
+      <div style="background:#fff;color:#201A17;border:2px solid #201A17;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px">
         <div data-i18n="ft_cart_title" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px">Your selection</div>
         <div id="cart-list" class="cart-list"></div>
         <div class="fields-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
@@ -126,7 +127,7 @@
           <pre id="pr-msg"></pre>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
             <button id="pr-direct" data-i18n="send_direct" class="pill" style="font-size:13px;background:#201A17;color:#fff">Send directly</button>
-            <a id="pr-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;padding:8px 16px;background:#E17BA4" href="#">Send email → boschungservices@gmail.com</a>
+            <a id="pr-mail" data-i18n="fld_mail" class="pill" style="font-size:13px;padding:8px 16px;background:#B44770;color:#fff" href="#">Send email → boschungservices@gmail.com</a>
             <button id="pr-copy" data-i18n="pz_copy" class="pill" style="font-size:13px;padding:8px 16px">Copy message</button>
             <span id="pr-note" class="copied-note"></span>
           </div>
@@ -137,7 +138,7 @@
 
   <!-- floating cart shortcut -->
   <div id="cart-bar" hidden>
-    <a href="#prints" class="pill" style="background:#E17BA4;font-size:14px;padding:11px 20px">🖼 <span id="cart-count">0</span> · <span data-i18n="ft_cart_go">To the order</span></a>
+    <a href="#prints" class="pill" style="background:#B44770;color:#fff;font-size:14px;padding:11px 20px">🖼 <span id="cart-count">0</span> · <span data-i18n="ft_cart_go">To the order</span></a>
   </div>
 
   <!-- FOOTER -->

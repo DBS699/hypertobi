@@ -1,0 +1,194 @@
+/* ============================================================
+   HYPERTOBI — mobile redesign (≤760px)
+   Source: Claude Design "Hypertobi Mobile" · variant 3a
+   ("The site asks first": burger menu, home = one question +
+   four answers, one compact hero per counter). Desktop untouched.
+   Imported after main.css so equal-specificity rules win.
+   ============================================================ */
+
+/* desktop never sees the mobile-only blocks */
+@media (min-width: 761px) {
+  .m-only, .m-menu { display: none !important; }
+}
+
+@media (max-width: 760px) {
+  .d-only { display: none !important; }
+
+  /* calmer page: no global crumple overlay, no paper picker */
+  .paper-overlay, .paper-picker { display: none; }
+  html.m-menu-open { overflow: hidden; }
+
+  /* ---- header ---- */
+  .nav { padding: 11px 16px 13px; gap: 10px; }
+  .nav-logo { font-size: 21px; }
+  .nav-links, .nav--open .nav-links { display: none; }
+  .nav-burger { width: 46px; height: 42px; }
+  .nav-burger span { width: 19px; }
+
+  /* four-color ribbon pinned to the bottom edge, with a soft fade above it */
+  .page::after {
+    content: ''; position: fixed; left: 0; right: 0; bottom: 0; z-index: 240; height: 30px;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, var(--pizza) 0 25%, var(--film) 25% 50%, var(--foto) 50% 75%, var(--web) 75% 100%) bottom / 100% 4px no-repeat,
+      linear-gradient(to top, var(--paper) 0 50%, transparent 100%);
+  }
+
+  /* ---- full-screen menu ---- */
+  .m-menu {
+    position: fixed; inset: 0; z-index: 500; background: var(--paper);
+    display: flex; flex-direction: column; overflow-y: auto;
+    padding: 20px 22px calc(40px + env(safe-area-inset-bottom));
+    animation: mMenuRise 0.22s ease both;
+  }
+  .m-menu[hidden] { display: none; }
+  @keyframes mMenuRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  .m-menu-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-bottom: 22px; }
+  .m-menu-label { font-size: 11.5px; font-weight: 800; letter-spacing: 1.8px; color: var(--muted); }
+  .m-menu-close {
+    width: 46px; height: 42px; background: #fff; border: 2px solid var(--ink); border-radius: 10px;
+    box-shadow: 2px 2px 0 var(--ink); font-size: 24px; font-weight: 800; line-height: 1;
+    color: var(--ink); cursor: pointer; padding: 0;
+  }
+  .m-menu-links { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+  .m-menu-link {
+    font-family: var(--display); font-weight: 800; font-size: 38px; letter-spacing: -1.5px;
+    line-height: 1.05; padding: 10px 0; text-decoration: none; background-size: 420px;
+  }
+  .m-menu-link[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+  .m-menu-lang { align-self: flex-start; margin-top: 26px; padding: 3px; }
+  .m-menu-lang button { font-size: 13px; padding: 10px 15px; }
+  .m-menu-foot { margin-top: auto; padding-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+  .m-menu-contacts { display: flex; gap: 10px; flex-wrap: wrap; }
+  .m-menu-contacts .pill { padding: 12px 18px; }
+  .m-menu-legal { font-size: 12.5px; color: var(--muted); }
+  .m-menu-legal a { color: inherit; }
+
+  /* ---- home: one question, four answers ---- */
+  .m-ask-head { padding: 34px 20px 22px; }
+  .m-kicker { font-size: 11.5px; font-weight: 800; letter-spacing: 1.8px; color: var(--muted); }
+  .m-ask-title {
+    font-family: var(--display); font-weight: 800; font-size: 46px; line-height: 0.98;
+    letter-spacing: -1.6px; margin: 12px 0 0;
+  }
+  .m-ask-title .tt { background-size: 420px; display: inline; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .m-ask-list { padding: 0 20px 34px; display: flex; flex-direction: column; gap: 14px; }
+  .m-ask-card {
+    display: flex; align-items: center; gap: 14px; min-height: 104px; padding: 14px;
+    color: #fff; text-decoration: none; border: 2px solid var(--ink); border-radius: 18px;
+    box-shadow: 5px 5px 0 var(--ink); background-size: 640px;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .m-ask-card:hover { color: #fff; }
+  .m-ask-card:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+  .m-ask-card--pizza { background-color: #D53B27; background-image: url('/textures/crumple-pizza.png'); }
+  .m-ask-card--film  { background-color: #845FCA; background-image: url('/textures/crumple-film.png'); }
+  .m-ask-card--foto  { background-color: #B44770; background-image: url('/textures/crumple-foto.png'); }
+  .m-ask-card--web   { background-color: var(--web); background-image: url('/textures/crumple-web.png'); }
+  .m-ask-card img {
+    width: 74px; height: 74px; flex: none; object-fit: cover;
+    border-radius: 12px; border: 2px solid var(--ink); display: block;
+  }
+  .m-ask-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+  .m-ask-t { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.7px; line-height: 1.05; }
+  .m-ask-s { font-size: 13px; font-weight: 600; opacity: 0.92; }
+  .m-ask-arr { font-family: var(--display); font-weight: 800; font-size: 24px; flex: none; }
+
+  /* ---- counter pages: compact hero, static render on the right ---- */
+  .hero { padding: 26px 20px 20px; }
+  /* German/French headlines are too long to share a row with the render, so:
+     brand + render side by side on top, headline full width below */
+  .hero-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 0 8px; }
+  .hero-row > div:first-child { display: contents; }
+  .hero-row > div:first-child > * { grid-column: 1 / -1; }
+  .hero .brand { font-size: 24px; grid-column: 1 !important; grid-row: 1; align-self: end; margin-bottom: 6px; }
+  .hero h1 { font-size: 34px; letter-spacing: -0.035em; margin-top: 4px; }
+  .hero .sub { display: none; }
+  .hero [data-anim="chips"] { gap: 8px 10px !important; margin-top: 14px !important; }
+  .hero [data-anim="chips"] > span { font-size: 13px !important; }
+  .model-slot { grid-column: 2; grid-row: 1; width: 96px; margin: 0; align-self: end !important; }
+
+  .main { padding: 0 20px 48px; gap: 22px; }
+  /* home cards jump straight to these forms — keep them clear of the sticky header */
+  #booking, #devrun, #prints, #anfrage { scroll-margin-top: 78px; }
+  .card { padding: 22px; box-shadow: 5px 5px 0 var(--ink); }
+  .h2 { font-size: 26px; }
+  .sec-title { font-size: 28px; letter-spacing: -1.2px; margin-bottom: 14px; }
+  .sec-sub { display: none; }
+  .booking-grid { gap: 18px !important; padding: 22px !important; grid-template-columns: minmax(0, 1fr) !important; }
+  .booking-grid h2 { font-size: 28px !important; letter-spacing: -1.2px !important; }
+  .field input, .field select, .field textarea { font-size: 16px; } /* no iOS zoom on focus */
+
+  /* ---- pizza ---- */
+  .offer-card {
+    padding: 0 0 20px; gap: 8px; overflow: hidden;
+    background: #D53B27 url('/textures/crumple-pizza.png') !important; background-size: 640px !important;
+    color: #fff !important;
+  }
+  .offer-card > :not(.swipe-gal) { margin-left: 20px; margin-right: 20px; }
+  .offer-card .swipe-gal {
+    order: -1; gap: 2px; border-radius: 0; margin-bottom: 10px; border-bottom: 2px solid var(--ink);
+  }
+  .offer-card .swipe-gal img { width: 100%; height: 150px; border-radius: 0; }
+  .offer-short { margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; }
+  .offer-card .pill { margin-top: 6px; background: #fff !important; color: #D53B27 !important; }
+  .pk-hint { margin: -6px 0 16px; font-size: 13.5px; }
+  .pk-grid { gap: 14px; }
+  .pk-card { padding: 16px 18px; gap: 6px; }
+  .pk-list { display: none; }
+  .pk-name { font-size: 21px; }
+  .pk-price { font-size: 22px; }
+  .pk-short { font-size: 13.5px; line-height: 1.45; font-weight: 600; opacity: 0.85; }
+  .pk-pick { margin-top: 6px; }
+  .pk-ws { padding: 16px 18px; }
+  .menu-note { font-size: 12.5px; margin-top: 14px; }
+  .faq summary { font-size: 15px; padding: 14px 18px; }
+  .faq .a { padding: 0 18px 16px; font-size: 14px; }
+
+  /* floating shortcut to the booking form (pizza) */
+  .m-cta {
+    position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 300;
+    transform: translateX(-50%); white-space: nowrap;
+    font-weight: 700; font-size: 15px; text-decoration: none; color: #fff;
+    border: 2px solid var(--ink); border-radius: 999px; padding: 14px 26px;
+    background: var(--c, var(--pizza)); box-shadow: 4px 4px 0 var(--ink);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .m-cta:hover { color: #fff; }
+  .m-cta--away { opacity: 0; pointer-events: none; transform: translate(-50%, 16px); }
+
+  /* ---- film ---- */
+  .m-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .m-chip {
+    font-size: 13px; font-weight: 700; border: 2px solid var(--ink); border-radius: 999px;
+    padding: 8px 14px; background: #fff;
+  }
+  .how-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .how-grid .step-box { border: none !important; padding: 0; flex-direction: row; align-items: center; gap: 14px; }
+  .how-grid .step-box .n { font-size: 22px; width: 20px; line-height: 1; flex: none; }
+  #fd-notify input { max-width: none !important; min-width: 0 !important; flex: 1 1 100% !important; }
+
+  /* ---- foto ---- */
+  .m-hint { font-size: 13px; color: var(--muted); margin: -6px 0 -8px; }
+  .gallery-panel { padding: 18px; box-shadow: 5px 5px 0 var(--foto); }
+  .foto-frame { transform: none; margin-bottom: 18px; }
+  #cart-bar { left: 50%; right: auto; transform: translateX(-50%); bottom: calc(22px + env(safe-area-inset-bottom)); white-space: nowrap; }
+
+  /* ---- web ---- */
+  .m-webcard {
+    background: var(--web) url('/textures/crumple-web.png'); background-size: 640px; color: #fff;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .m-webcard-price { font-family: var(--display); font-weight: 800; font-size: 30px; letter-spacing: -1.2px; line-height: 1; }
+  .m-checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; font-weight: 600; }
+  .m-checks li::before { content: '✓'; font-family: var(--display); font-weight: 800; margin-right: 10px; }
+  .pf-chrome, .pf-tag { display: none; }
+  .pf-meta { justify-content: space-between; }
+  .pf-view { height: 190px; }
+  .pf-card { box-shadow: 5px 5px 0 var(--ink); }
+
+  /* ---- footer: legal line only (contacts live in the menu) ---- */
+  .footer { padding: 26px 20px calc(44px + env(safe-area-inset-bottom)); }
+  .footer > div:first-child { display: none !important; } /* beats its inline display:flex */
+  .footer .made > span:first-child, .footer .made > br { display: none; }
+}

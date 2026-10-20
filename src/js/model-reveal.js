@@ -116,7 +116,8 @@ export function initModelAmbient(opts) {
   const slot = typeof opts.slot === 'string' ? document.querySelector(opts.slot) : opts.slot;
   if (!slot) return;
   slot.style.setProperty('--accent', opts.accent || '#201A17');
-  if (!hasWebGL()) {
+  /* phones get the static render (mobile redesign) — saves the 4–5 MB GLB */
+  if (!hasWebGL() || window.matchMedia('(max-width: 760px)').matches) {
     slot.innerHTML = '<img src="' + opts.poster + '" alt="' + (opts.alt || '') +
       '" style="width:100%;height:100%;object-fit:contain;display:block">';
     return;

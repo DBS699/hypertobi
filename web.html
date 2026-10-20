@@ -55,8 +55,19 @@
 
   <main class="main">
 
+    <!-- mobile: price + promises in one card -->
+    <section class="card m-only m-webcard">
+      <div class="m-webcard-price"><span data-i18n="pz_from">from</span> CHF 800</div>
+      <ul class="m-checks">
+        <li data-i18n="wb_c1t">Exactly what you need</li>
+        <li data-i18n="wb_c2t">Fast &amp; mobile-first</li>
+        <li data-i18n="wb_c3t">Yours to keep</li>
+      </ul>
+      <a data-i18n="wb_cta" class="pill" style="align-self:flex-start;color:#2E5BFF;padding:12px 20px" href="#anfrage">Tell me about your project</a>
+    </section>
+
     <!-- WHAT YOU GET -->
-    <div class="grid-3" data-anim-alt>
+    <div class="grid-3 d-only" data-anim-alt>
       <div class="mini-card" style="background:#fff url('/textures/crumple-white.png');background-size:640px;padding:22px">
         <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;color:#2E5BFF">✓</span>
         <div class="t" style="font-size:19px" data-i18n="wb_c1t">Exactly what you need</div>
@@ -98,7 +109,7 @@
     </section>
 
     <!-- PROCESS + CTA -->
-    <section class="card" data-anim="card" style="background:#2E5BFF;color:#fff">
+    <section class="card d-only" data-anim="card" style="background:#2E5BFF;color:#fff">
       <div class="grid-3" style="gap:14px">
         <div class="step-box" style="border:2px solid rgba(255,255,255,.75)">
           <span class="n">1</span>

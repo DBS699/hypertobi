@@ -68,9 +68,10 @@
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_offer_t">This is what I offer.</h2>
       <div class="grid-2">
       <!-- Catering card -->
-      <section class="card" data-anim="card" style="background:#D53B27;color:#fff;display:flex;flex-direction:column;gap:16px">
+      <section class="card offer-card" data-anim="card" style="background:#D53B27;color:#fff;display:flex;flex-direction:column;gap:16px">
         <h2 class="h2" data-i18n="pz_cat_title">Catering</h2>
-        <p data-i18n="pz_cat_body" style="font-size:14.5px;line-height:1.6;margin:0">I bring the oven, the dough and the hype — you bring the people. Fresh Neapolitan pizza, stretched and fired in front of your guests, one after the other until everyone is happy.</p>
+        <p class="m-only offer-short" data-i18n="pz_cat_short">I bring the oven — fresh Neapolitan pizza, fired live at your party.</p>
+        <p class="d-only" data-i18n="pz_cat_body" style="font-size:14.5px;line-height:1.6;margin:0">I bring the oven, the dough and the hype — you bring the people. Fresh Neapolitan pizza, stretched and fired in front of your guests, one after the other until everyone is happy.</p>
         <div class="swipe-gal" aria-label="Impressions — swipe">
           <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="The oven in action at an event" loading="lazy">
           <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Pizza in the wood-fired oven" loading="lazy">
@@ -82,10 +83,11 @@
       </section>
 
       <!-- Workshop card -->
-      <section class="card" data-anim="card" style="background:#fff;display:flex;flex-direction:column;gap:16px">
+      <section class="card offer-card offer-card--ws" data-anim="card" style="background:#fff;display:flex;flex-direction:column;gap:16px">
         <h2 class="h2" data-i18n="pz_ws_title">Workshops &amp; teambuilding</h2>
-        <p data-i18n="pz_ws_body" style="font-size:14.5px;line-height:1.6;margin:0;color:#4a423c">Hands in the dough: I show your team how to stretch, top and fire a real Neapolitan pizza. Everyone makes their own — then we all eat together at one long table. Works great for teams of 6 to 30.</p>
-        <div data-anim-alt style="display:flex;flex-direction:column;gap:8px">
+        <p class="m-only offer-short" data-i18n="pz_ws_short">Your team makes its own pizza, then we all eat together. 6–30 people, ~3 h.</p>
+        <p class="d-only" data-i18n="pz_ws_body" style="font-size:14.5px;line-height:1.6;margin:0;color:#4a423c">Hands in the dough: I show your team how to stretch, top and fire a real Neapolitan pizza. Everyone makes their own — then we all eat together at one long table. Works great for teams of 6 to 30.</p>
+        <div class="d-only" data-anim-alt style="display:flex;flex-direction:column;gap:8px">
           <div class="step-row"><span class="n">1</span><span data-i18n="pz_ws_b1">Dough theory (the fun kind)</span></div>
           <div class="step-row"><span class="n">2</span><span data-i18n="pz_ws_b2">Stretch, top &amp; fire your own pizza</span></div>
           <div class="step-row"><span class="n">3</span><span data-i18n="pz_ws_b3">Long table dinner together</span></div>
@@ -96,6 +98,7 @@
           <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="The result: fresh pizza" loading="lazy">
           <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Long table dinner" loading="lazy">
         </div>
+        <a href="#booking" data-i18n="pz_form_title" class="pill" style="align-self:flex-start;background:#D53B27;color:#fff;padding:10px 20px">Request a date</a>
       </section>
       </div>
     </section>
@@ -105,37 +108,44 @@
     <section data-anim="card">
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_pk_t">Packages &amp; prices.</h2>
       <p class="sec-sub" data-i18n="pz_pk_sub">Flat and fair — you get a fixed quote after your request, no surprises on the day.</p>
+      <p class="pk-hint" data-i18n="pz_pk_pick">👉 Tap a package to pick it — your choice lands right in the request form below.</p>
       <div class="grid-3 pk-grid">
         <div class="card pk-card">
           <div class="pk-name">Aperitivo</div>
           <div class="pk-price">CHF <span data-price="pk1_price">22</span> <span data-i18n="pz_pp">/ person</span></div>
+          <div class="pk-short m-only" data-i18n="pz_pk1_short"></div>
           <ul class="pk-list">
             <li data-i18n="pz_pk1_l1">Up to 30 guests</li>
             <li data-i18n="pz_pk1_l2">1.5 h of service</li>
             <li data-i18n="pz_pk1_l3">Margherita &amp; Marinara, sliced apéro-style</li>
             <li data-i18n="pz_pk1_l4">Perfect for openings &amp; office apéros</li>
           </ul>
+          <div class="pk-pick" data-i18n="pz_pk_pick_btn">Select</div>
         </div>
         <div class="card pk-card pk-card--hot">
           <div class="pk-flag" data-i18n="pz_pk_flag">MOST BOOKED</div>
           <div class="pk-name">La Festa</div>
           <div class="pk-price">CHF <span data-price="pk2_price">32</span> <span data-i18n="pz_pp2">/ person</span></div>
+          <div class="pk-short m-only" data-i18n="pz_pk2_short"></div>
           <ul class="pk-list">
             <li data-i18n="pz_pk2_l1">10–150 guests</li>
             <li data-i18n="pz_pk2_l2">2 h all-you-can-eat, straight from the oven</li>
             <li data-i18n="pz_pk2_l3">Full menu incl. the monthly special</li>
             <li data-i18n="pz_pk2_l4">Plates, napkins, setup &amp; teardown included</li>
           </ul>
+          <div class="pk-pick" data-i18n="pz_pk_pick_btn">Select</div>
         </div>
         <div class="card pk-card">
           <div class="pk-name">Matrimonio</div>
           <div class="pk-price"><span data-i18n="pz_from">from</span> CHF <span data-price="pk3_price">39</span> <span data-i18n="pz_pp3">/ person</span></div>
+          <div class="pk-short m-only" data-i18n="pz_pk3_short"></div>
           <ul class="pk-list">
             <li data-i18n="pz_pk3_l1">Weddings &amp; big days</li>
             <li data-i18n="pz_pk3_l2">Extended service &amp; antipasti boards</li>
             <li data-i18n="pz_pk3_l3">Dessert pizza with Nutella &amp; berries</li>
             <li data-i18n="pz_pk3_l4">Personal planning call included</li>
           </ul>
+          <div class="pk-pick" data-i18n="pz_pk_pick_btn">Select</div>
         </div>
       </div>
       <div class="card pk-ws">
@@ -146,7 +156,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section data-anim="card">
+    <section class="d-only" data-anim="card">
       <h2 class="sec-title tt tt--lg tt--pizza" data-i18n="pz_how_t">How it works.</h2>
       <div class="grid-4 how-grid">
         <div class="card how-card"><span class="hn">1</span><div class="ht" data-i18n="pz_how1_t">Request your date</div><p data-i18n="pz_how1_b">Form below — you hear back within 48 h with a fixed quote.</p></div>
@@ -203,6 +213,9 @@
 
 
   </main>
+
+  <!-- mobile: floating shortcut to the booking form -->
+  <a href="#booking" class="m-cta m-only" data-i18n="mob_book_cta" style="--c:#D53B27">Request a date ↓</a>
 
   <!-- FOOTER -->
   <footer class="footer">

@@ -14,7 +14,7 @@
   --web: #2E5BFF;
   --cream: #F5EEE2;
   --display: 'Bricolage Grotesque', sans-serif;
-  --body: 'Archivo', sans-serif;
+  --body: 'Instrument Sans', sans-serif;
   --retro: 'Press Start 2P', monospace;
 }
 
@@ -164,15 +164,16 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
   transition: box-shadow 0.18s ease;
 }
 .tile:hover { box-shadow: 9px 9px 0 var(--ink); }
-.tile--pizza { background: var(--pizza) url('/textures/crumple-pizza.png'); padding: 30px; gap: 18px; min-height: 250px; }
-.tile--film  { background: var(--film)  url('/textures/crumple-film.png');  padding: 24px; gap: 14px; min-height: 250px; }
-.tile--foto  { background: var(--foto)  url('/textures/crumple-foto.png');  padding: 24px; gap: 14px; min-height: 190px; }
+/* tiles use darkened AA variants of the brand tokens so the white copy
+   stays readable on the texture (white on --foto is only 2.8:1) */
+.tile--pizza { background: #D53B27 url('/textures/crumple-pizza.png'); padding: 30px; gap: 18px; min-height: 250px; }
+.tile--film  { background: #845FCA url('/textures/crumple-film.png');  padding: 24px; gap: 14px; min-height: 250px; }
+.tile--foto  { background: #B44770 url('/textures/crumple-foto.png');  padding: 24px; gap: 14px; min-height: 190px; }
 .tile--web   { background: var(--web)   url('/textures/crumple-web.png');   padding: 24px; gap: 14px; min-height: 190px; }
 .tile-title { font-family: var(--display); font-weight: 800; font-size: 30px; letter-spacing: -1px; line-height: 1.02; }
 .tile--pizza .tile-title { font-size: 46px; letter-spacing: -1.5px; line-height: 1; }
-.tile-desc { font-size: 13.5px; line-height: 1.5; }
-.tile--pizza .tile-desc { font-size: 15px; line-height: 1.55; max-width: 400px; }
-.tile--foto .tile-desc { color: #ffe3ef; }
+.tile-desc { font-size: 15px; line-height: 1.5; font-weight: 600; }
+.tile--pizza .tile-desc { font-size: 16px; line-height: 1.55; max-width: 400px; }
 .tile-arrow { font-family: var(--display); font-weight: 800; font-size: 24px; text-align: right; }
 
 /* peel corner hint */
@@ -478,14 +479,6 @@ html[data-paper="silver"] { --paper: #E4E6E9; }
 @media (max-width: 760px) {
   .nav-burger { display: flex; }
   .nav-links { display: none; }
-  .nav--open .nav-links {
-    display: flex; flex-direction: column; align-items: flex-start; gap: 16px;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--paper); border-bottom: 2px solid var(--ink);
-    padding: 20px 20px 24px; box-shadow: 0 14px 26px rgba(32, 26, 23, 0.14);
-  }
-  .nav--open .nav-link { font-size: 18px; }
-  .nav--open .lang-toggle { margin-top: 6px; }
 }
 @media (max-width: 960px) {
   .nav { padding: 14px 20px; gap: 10px; }
@@ -524,6 +517,17 @@ html[data-paper="silver"] { --paper: #E4E6E9; }
 }
 .pk-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
 .pk-card--hot { background: var(--ink); color: #FAF4E8; }
+/* selection signage: hint above the grid + a select/selected pill per card */
+.pk-hint { font-size: 14.5px; font-weight: 700; color: var(--pizza); margin: -12px 0 22px; }
+.pk-pick {
+  margin-top: auto; align-self: flex-start;
+  border: 2px solid var(--ink); border-radius: 999px; padding: 7px 16px;
+  background: #fff; color: var(--ink); font-weight: 700; font-size: 13px;
+  box-shadow: 3px 3px 0 var(--ink); transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.pk-card:hover .pk-pick { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink); }
+.pk-card--hot .pk-pick { background: #FFD23E; box-shadow: 3px 3px 0 #FAF4E8; }
+.pk-card--hot:hover .pk-pick { box-shadow: 4px 4px 0 #FAF4E8; }
 .pk-flag {
   position: absolute; top: -14px; right: 18px; background: #FFD23E; color: var(--ink);
   border: 2px solid var(--ink); border-radius: 999px; padding: 4px 12px;

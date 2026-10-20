@@ -1,6 +1,7 @@
 import './styles/main.css';
+import './styles/mobile.css';
 import './js/nav.js';
-import { initI18n } from './js/i18n.js';
+import { initI18n, t } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
 import { wireCompose, wireDirectSend, wireMailHint, val } from './js/compose.js';
 import { initModelAmbient } from './js/model-reveal.js';
@@ -52,6 +53,14 @@ function paintPkgs() {
     const on = c.querySelector('.pk-name').textContent.trim() === selectedPkg;
     c.classList.toggle('pk-card--hot', on);
     c.setAttribute('aria-pressed', String(on));
+    /* swap the pill between "Select" and "✓ Selected" — the data-i18n
+       attribute moves along so language switches keep the right label */
+    const pick = c.querySelector('.pk-pick');
+    if (pick) {
+      const key = on ? 'pz_pk_picked' : 'pz_pk_pick_btn';
+      pick.setAttribute('data-i18n', key);
+      pick.textContent = t(key);
+    }
   });
   const label = document.getElementById('bk-pkg');
   if (label) label.textContent = selectedPkg;
@@ -90,3 +99,11 @@ wireDirectSend({
     website: ''
   })
 });
+
+/* mobile: the floating "request a date" pill steps aside once the form is on screen */
+const mCta = document.querySelector('.m-cta');
+const booking = document.getElementById('booking');
+if (mCta && booking && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([e]) => mCta.classList.toggle('m-cta--away', e.isIntersecting))
+    .observe(booking);
+}

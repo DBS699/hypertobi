@@ -1,4 +1,5 @@
 import './styles/main.css';
+import './styles/mobile.css';
 import './js/nav.js';
 import { initI18n, t, current } from './js/i18n.js';
 import { runIntro } from './js/intro.js';
@@ -23,6 +24,41 @@ initModelAmbient({
 
 /* CMS-managed dev-run date + slots */
 applyFilmRun();
+
+/* "notify me about the next run" -> email via /api/contact (Tobi keeps the
+   list manually — same channel as all other inquiries) */
+document.getElementById('fd-notify').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const emailEl = document.getElementById('fd-notify-email');
+  if (!emailEl.reportValidity()) return;
+  const btn = e.currentTarget.querySelector('button');
+  const note = document.getElementById('fd-notify-note');
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = t('send_sending');
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        subject: 'Termin-Benachrichtigung Filmentwicklung',
+        message: 'Bitte benachrichtigen, sobald der nächste Entwicklungstermin feststeht.\n'
+          + 'Email: ' + emailEl.value + '\nSprache: ' + current(),
+        name: emailEl.value.split('@')[0],
+        email: emailEl.value,
+        website: ''
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) throw new Error('send failed');
+    btn.textContent = t('send_done');
+    note.textContent = t('fld_notify_ok');
+  } catch {
+    btn.disabled = false;
+    btn.textContent = original;
+    note.textContent = t('fld_notify_fail');
+  }
+});
 
 /* dev-run sign-up -> email to boschungservices@gmail.com */
 wireCompose({
